@@ -5,3 +5,7 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+  body {
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif, "Helvetica Neue", Arial, sans-serif;
+  }
