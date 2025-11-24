@@ -1,11 +1,55 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter
 ---
 
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
-  body {
-    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif, "Helvetica Neue", Arial, sans-serif;
-  }
+/* 这里开始自定义样式 */
+body {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+.site-header {
+  background-color: #e0e0e0;
+  color: #444444;
+}
+
+.site-header .site-title,
+.site-header .site-nav a {
+  color: #444444;
+}
+
+.site-header .site-nav a:hover {
+  color: #888888;
+}
+
+footer {
+  background-color: #dcdcdc;
+  color: #333333;
+}
+
+.sidebar-module {
+  background-color: #eaeaea;
+}
+
+a {
+  color: #666666;
+}
+
+a:hover {
+  color: #888888;
+}
+
+.button, input[type="submit"] {
+  background-color: #b0b0b0;
+  color: #fff;
+  border: none;
+}
+
+.button:hover, input[type="submit"]:hover {
+  background-color: #909090;
+}
