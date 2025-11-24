@@ -3,16 +3,52 @@ layout: base
 ---
 
 <style type="text/css" media="screen">
+  body {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+
   .container {
-    margin: 10px auto;
+    margin: 5vh auto;
     max-width: 600px;
     text-align: center;
+    padding: 20px;
   }
+
   h1 {
-    margin: 30px 0;
-    font-size: 4em;
+    font-size: 6em;
+    margin: 0.5em 0;
     line-height: 1;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    color: #ff6b6b;
+    animation: pulse 1.5s infinite;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+
+  a.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #4f46e5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  a.button:hover {
+    background: #6366f1;
+    transform: translateY(-3px);
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
   }
 </style>
 
@@ -20,5 +56,6 @@ layout: base
   <h1>404</h1>
 
   <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p>The page you are looking for does not exist.</p>
+  <a href="{{ site.baseurl }}/" class="button">Go Home</a>
 </div>
