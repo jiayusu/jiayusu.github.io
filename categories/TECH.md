@@ -1,7 +1,7 @@
 ---
 layout: page
-title: BOOKS
-permalink: /categories/BOOKS/
+title: TECH
+permalink: /categories/TECH/
 ---
 
 {% for post in site.categories.BOOKS %}
