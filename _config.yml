@@ -18,6 +18,9 @@ theme: minima                 # 使用 Gem 版本（GitHub Pages 自带）
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+sass:
+  style: compressed
 #
 # The `>` after `description:` means to ignore line-breaks until next key. If
 #   you wish to omit the line-break after the end of text, use `>-` instead.
