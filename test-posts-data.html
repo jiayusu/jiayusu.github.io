@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试文章数据</title>
+</head>
+<body>
+    <h1>测试文章数据</h1>
+    <div id="test-results"></div>
+    
+    <script src="assets/js/posts-data.js"></script>
+    <script>
+        const resultsDiv = document.getElementById("test-results");
+        
+        if (typeof postsData !== "undefined") {
+            resultsDiv.innerHTML = "<h2>文章数据加载成功！</h2>";
+            resultsDiv.innerHTML += "<h3>可用文章:</h3>";
+            resultsDiv.innerHTML += "<ul>";
+            
+            postsData.forEach(post => {
+                resultsDiv.innerHTML += "<li><strong>" + post.title + "</strong> (" + post.filename + \")</li>";
+            });
+            
+            resultsDiv.innerHTML += "</ul>";
+        } else {
+            resultsDiv.innerHTML = "<h2>文章数据加载失败！</h2>";
+        }
+    </script>
+</body>
+</html>
