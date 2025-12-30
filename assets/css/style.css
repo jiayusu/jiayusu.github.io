@@ -1,21 +1,15 @@
-/* CSS变量 - 极简淡雅风格 */
+/* CSS变量 - 极致简约风格 */
 :root {
-    /* 颜色 - 超淡雅配色方案 */
-    --primary-color: #7c3aed;
-    --primary-hover: #6d28d9;
-    --secondary-color: #fafafa;
-    --accent-color: #22d3ee;
+    /* 颜色 - 极简配色方案 */
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
     --background-color: #ffffff;
     --surface-color: #ffffff;
-    --text-primary: #374151;
+    --text-primary: #1f2937;
     --text-secondary: #6b7280;
-    --border-color: #f3f4f6;
-    --shadow-sm: none;
-    --shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
-    --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.03);
+    --border-color: #e5e7eb;
     
-    /* 字体 - 优雅简洁的排版 */
+    /* 字体 - 简洁的排版 */
     --font-serif: 'Noto Serif SC', serif;
     --font-sans: 'Inter', sans-serif;
     
@@ -24,20 +18,15 @@
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
-    --spacing-xl: 2.5rem;
-    --spacing-2xl: 4rem;
-    --spacing-3xl: 5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
     
-    /* 圆角 - 柔和的圆角 */
-    --radius-sm: 0.5rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.25rem;
+    /* 圆角 - 极简圆角 */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
     
-    /* 过渡 - 流畅自然的动画 */
-    --transition-fast: 0.3s ease;
-    --transition-normal: 0.5s ease;
-    --transition-slow: 0.7s ease;
+    /* 过渡 - 简单自然的动画 */
+    --transition-normal: 0.3s ease;
 }
 
 /* 重置样式 */
@@ -114,31 +103,25 @@ a:hover {
 /* 按钮样式 */
 .btn {
     display: inline-block;
-    padding: 0.875rem 2rem;
-    font-size: 0.95rem;
-    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-align: center;
     text-decoration: none;
-    border-radius: 50px;
-    transition: all var(--transition-normal);
+    border-radius: 4px;
+    transition: background-color var(--transition-normal);
     cursor: pointer;
     border: none;
     outline: none;
-    letter-spacing: 0.01em;
-    position: relative;
-    overflow: hidden;
 }
 
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
     color: white;
 }
 
@@ -151,8 +134,6 @@ a:hover {
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
 }
 
 /* 导航栏 - 极简淡雅设计 */
@@ -161,57 +142,45 @@ a:hover {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
+    background-color: white;
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    transition: all var(--transition-normal);
     padding: 0;
-}
-
-.navbar.scrolled {
-    box-shadow: none;
-    border-bottom-color: var(--border-color);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem var(--spacing-xl);
+    padding: 1rem var(--spacing-xl);
 }
 
 .logo {
     display: flex;
     align-items: center;
     font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: var(--text-primary);
-    letter-spacing: -0.01em;
 }
 
 .logo-text {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-link {
     color: var(--text-secondary);
     font-weight: 400;
     font-size: 0.9rem;
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     position: relative;
-    transition: all var(--transition-normal);
-    letter-spacing: 0;
+    transition: color var(--transition-normal);
 }
 
 .nav-link::after {
@@ -228,7 +197,6 @@ a:hover {
 .nav-link:hover,
 .nav-link.active {
     color: var(--text-primary);
-    font-weight: 500;
 }
 
 .nav-link:hover::after,
@@ -274,140 +242,91 @@ a:hover {
 
 /* Hero区域 - 极简淡雅设计 */
 .hero {
-    padding: 5rem 0 3rem;
+    padding: 4rem 0 2rem;
     background-color: var(--background-color);
-    margin-top: 80px;
-    position: relative;
-    overflow: hidden;
+    margin-top: 60px;
     border-bottom: 1px solid var(--border-color);
-}
-
-.hero::before {
-    content: none;
 }
 
 .hero-content {
     max-width: 680px;
     margin: 0 auto;
     text-align: center;
-    position: relative;
 }
 
 .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
     font-weight: 500;
-    letter-spacing: -0.01em;
     line-height: 1.2;
     color: var(--text-primary);
 }
 
-.hero-title-line {
-    display: block;
-    margin-bottom: 0.75rem;
-}
-
 .hero-subtitle {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease 0.2s forwards;
+    margin-bottom: 1.5rem;
     font-weight: 400;
     line-height: 1.6;
 }
 
 .hero .btn {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease 0.4s forwards;
-    font-size: 0.95rem;
-    padding: 0.875rem 1.75rem;
-    border-radius: 40px;
-    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
     background-color: var(--primary-color);
     color: white;
-    box-shadow: none;
-}
-
-.hero .btn:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 /* 文章列表 - 极简淡雅设计 */
 .articles {
-    padding: 4rem 0;
+    padding: 3rem 0;
     background-color: var(--background-color);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    letter-spacing: -0.01em;
     color: var(--text-primary);
 }
 
 .section-title::after {
     content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
     width: 40px;
     height: 1px;
     background-color: var(--primary-color);
-    border-radius: 0.5px;
+    margin: 0.5rem auto 0;
 }
 
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
 .article-card {
     background-color: var(--surface-color);
-    border-radius: var(--radius-lg);
-    box-shadow: none;
-    transition: all var(--transition-normal);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.6s ease forwards;
+    border-radius: 4px;
+    transition: border-color var(--transition-normal);
     border: 1px solid var(--border-color);
     overflow: hidden;
 }
 
-.article-card:nth-child(1) { animation-delay: 0.1s; }
-.article-card:nth-child(2) { animation-delay: 0.2s; }
-.article-card:nth-child(3) { animation-delay: 0.3s; }
-.article-card:nth-child(4) { animation-delay: 0.4s; }
-.article-card:nth-child(5) { animation-delay: 0.5s; }
-.article-card:nth-child(6) { animation-delay: 0.6s; }
-
 .article-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--border-color);
+    border-color: var(--primary-color);
 }
 
 .article-card-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 
 .article-meta {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     font-size: 0.8rem;
     color: var(--text-secondary);
 }
@@ -418,26 +337,20 @@ a:hover {
 }
 
 .article-category {
-    background-color: transparent;
     color: var(--text-secondary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 40px;
-    font-weight: 400;
     font-size: 0.75rem;
-    border: 1px solid var(--border-color);
 }
 
 .article-title {
-    margin-bottom: 0.875rem;
-    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
     font-weight: 500;
     line-height: 1.3;
-    letter-spacing: 0;
 }
 
 .article-link {
     color: var(--text-primary);
-    transition: color var(--transition-fast);
+    transition: color var(--transition-normal);
 }
 
 .article-link:hover {
@@ -445,10 +358,10 @@ a:hover {
 }
 
 .article-excerpt {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--text-secondary);
-    line-height: 1.6;
-    font-size: 0.9rem;
+    line-height: 1.5;
+    font-size: 0.85rem;
 }
 
 .article-tags {
@@ -458,20 +371,11 @@ a:hover {
 }
 
 .tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
-    background-color: transparent;
-    padding: 0.25rem 0.75rem;
-    border-radius: 40px;
-    transition: all var(--transition-fast);
-    font-weight: 400;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
     border: 1px solid var(--border-color);
-}
-
-.tag:hover {
-    background-color: var(--border-color);
-    color: var(--text-primary);
-    border-color: var(--border-color);
 }
 
 .view-more {
@@ -908,218 +812,184 @@ a:hover {
 
 /* 文章页面样式 */
 .post {
-    padding: var(--spacing-3xl) 0;
+    padding: 2rem 0;
     background-color: var(--background-color);
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .post-content {
     background-color: var(--background-color);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-2xl);
-    box-shadow: var(--shadow-sm);
-    margin-bottom: var(--spacing-2xl);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s ease forwards;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .post-header {
-    margin-bottom: var(--spacing-2xl);
-    padding-bottom: var(--spacing-xl);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .post-title {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-lg);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
     color: var(--text-primary);
 }
 
 .post-meta {
     display: flex;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
+    gap: 1rem;
+    margin-bottom: 0.75rem;
     font-size: 0.875rem;
     color: var(--text-secondary);
 }
 
 .post-body {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.7;
     color: var(--text-primary);
 }
 
 .post-body h2 {
-    margin-top: var(--spacing-2xl);
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-sm);
-    border-bottom: 2px solid var(--border-color);
-    font-size: 2rem;
-}
-
-.post-body h3 {
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-md);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
     font-size: 1.5rem;
 }
 
-.post-body h4 {
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
+.post-body h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
     font-size: 1.25rem;
 }
 
+.post-body h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
 .post-body p {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .post-body blockquote {
-    margin: var(--spacing-xl) 0;
-    padding: var(--spacing-lg);
-    border-left: 4px solid var(--primary-color);
-    background-color: var(--secondary-color);
-    border-radius: var(--radius-sm);
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    border-left: 2px solid var(--primary-color);
     font-style: italic;
-}
-
-.post-body blockquote p {
-    margin-bottom: 0;
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 .post-body ul,
 .post-body ol {
-    margin: var(--spacing-lg) 0;
-    padding-left: var(--spacing-2xl);
+    margin: 1rem 0;
+    padding-left: 1.5rem;
 }
 
 .post-body li {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
 }
 
-.post-body li ul,
-.post-body li ol {
-    margin-top: var(--spacing-sm);
-    margin-bottom: 0;
-}
-
-.post-image {
-    margin: var(--spacing-2xl) 0;
-    text-align: center;
-}
-
-.image-responsive {
-    max-width: 100%;
-    height: auto;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    transition: transform var(--transition-normal);
-}
-
-.image-responsive:hover {
-    transform: scale(1.02);
-}
-
-.image-caption {
-    margin-top: var(--spacing-sm);
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    font-style: italic;
-}
-
 .post-body pre {
-    margin: var(--spacing-lg) 0;
-    padding: var(--spacing-lg);
+    margin: 1rem 0;
+    padding: 1rem;
     background-color: var(--surface-color);
-    border-radius: var(--radius-md);
+    border-radius: 4px;
     overflow-x: auto;
-    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
 
 .post-body code {
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
     font-size: 0.9rem;
     background-color: var(--surface-color);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
     color: var(--text-primary);
+    border: 1px solid var(--border-color);
 }
 
 .post-body pre code {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
+    border: none;
 }
 
 .post-table {
     width: 100%;
     border-collapse: collapse;
-    margin: var(--spacing-lg) 0;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    margin: 1rem 0;
+    border: 1px solid var(--border-color);
 }
 
 .post-table th,
 .post-table td {
-    padding: var(--spacing-md);
+    padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.post-table th:last-child,
+.post-table td:last-child {
+    border-right: none;
 }
 
 .post-table th {
-    background-color: var(--secondary-color);
     font-weight: 600;
     color: var(--text-primary);
-}
-
-.post-table tr:hover {
     background-color: var(--surface-color);
 }
 
+.post-table tr:last-child td {
+    border-bottom: none;
+}
+
 .post-footer {
-    margin-top: var(--spacing-2xl);
-    padding-top: var(--spacing-xl);
+    margin-top: 2rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--border-color);
 }
 
 .post-share {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 1.5rem;
 }
 
 .share-links {
     display: flex;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-sm);
+    gap: 1rem;
+    margin-top: 0.75rem;
 }
 
 .share-link {
     display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-lg);
+    padding: 0.5rem 1rem;
     background-color: var(--surface-color);
     color: var(--text-primary);
-    border-radius: var(--radius-sm);
+    border-radius: 4px;
     font-size: 0.875rem;
-    transition: all var(--transition-fast);
+    transition: background-color var(--transition-normal);
+    border: 1px solid var(--border-color);
 }
 
 .share-link:hover {
     background-color: var(--primary-color);
     color: white;
-    transform: translateY(-2px);
+    border-color: var(--primary-color);
 }
 
 .post-nav {
     display: flex;
     justify-content: space-between;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-2xl);
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s ease 0.2s forwards;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .post-nav-item {
@@ -1136,31 +1006,31 @@ a:hover {
 
 .post-nav-link {
     display: block;
-    padding: var(--spacing-lg);
+    padding: 0.75rem;
     background-color: var(--surface-color);
-    border-radius: var(--radius-md);
+    border-radius: 4px;
     transition: all var(--transition-normal);
     color: var(--text-primary);
+    border: 1px solid var(--border-color);
 }
 
 .post-nav-link:hover {
     background-color: var(--primary-color);
     color: white;
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
 }
 
 .nav-label {
     display: block;
     font-size: 0.875rem;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.25rem;
 }
 
 .nav-title {
     display: block;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 /* 文章列表页面样式 */

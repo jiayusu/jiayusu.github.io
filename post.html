@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章列表 - 我的博客</title>
+    <title>文章详情 - 我的博客</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -18,7 +19,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">首页</a></li>
-                <li><a href="posts.html" class="nav-link active">文章</a></li>
+                <li><a href="index.html#articles" class="nav-link active">文章</a></li>
                 <li><a href="index.html#about" class="nav-link">关于我</a></li>
                 <li><a href="index.html#contact" class="nav-link">联系</a></li>
             </ul>
@@ -28,30 +29,51 @@
         </div>
     </nav>
 
-    <!-- 文章列表 -->
-    <main class="posts-page">
+    <!-- 文章内容 -->
+    <main class="post">
         <div class="container">
-            <h1 class="page-title">所有文章</h1>
-            <div class="articles-grid">
-                <!-- 文章卡片1 -->
-                <article class="article-card">
-                    <div class="article-card-content">
-                        <div class="article-meta">
-                            <span class="article-date">2025-11-24</span>
-                            <span class="article-category">BLOG</span>
-                        </div>
-                        <h3 class="article-title">
-                            <a href="post.html?file=2025-11-24-3D扫描生成与打印.md" class="article-link">3D扫描、生成与打印</a>
-                        </h3>
-                        <p class="article-excerpt">探讨3D扫描、生成与打印技术的发展和应用，以及如何降低3D建模门槛。</p>
-                        <div class="article-tags">
-                            <span class="tag">3D</span>
-                            <span class="tag">扫描</span>
-                            <span class="tag">打印</span>
+            <article class="post-content">
+                <!-- 文章头部 -->
+                <header class="post-header">
+                    <h1 class="post-title" id="post-title">加载中...</h1>
+                </header>
+
+                <!-- 文章正文 -->
+                <div class="post-body" id="post-content">
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+
+                <!-- 文章底部 -->
+                <footer class="post-footer">
+                    <div class="post-share">
+                        <h3>分享文章</h3>
+                        <div class="share-links">
+                            <a href="#" class="share-link">微信</a>
+                            <a href="#" class="share-link">微博</a>
+                            <a href="#" class="share-link">知乎</a>
+                            <a href="#" class="share-link">GitHub</a>
                         </div>
                     </div>
-                </article>
-            </div>
+                </footer>
+            </article>
+
+            <!-- 文章导航 -->
+            <nav class="post-nav">
+                <div class="post-nav-item prev">
+                    <a href="#" class="post-nav-link">
+                        <span class="nav-label">上一篇</span>
+                        <span class="nav-title">没有了</span>
+                    </a>
+                </div>
+                <div class="post-nav-item next">
+                    <a href="#" class="post-nav-link">
+                        <span class="nav-label">下一篇</span>
+                        <span class="nav-title">没有了</span>
+                    </a>
+                </div>
+            </nav>
         </div>
     </main>
 
@@ -67,7 +89,7 @@
                     <h4 class="footer-links-title">快速链接</h4>
                     <ul class="footer-links-list">
                         <li><a href="index.html" class="footer-link">首页</a></li>
-                        <li><a href="posts.html" class="footer-link">文章</a></li>
+                        <li><a href="index.html#articles" class="footer-link">文章</a></li>
                         <li><a href="index.html#about" class="footer-link">关于我</a></li>
                         <li><a href="index.html#contact" class="footer-link">联系</a></li>
                     </ul>
@@ -80,5 +102,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/post.js"></script>
 </body>
 </html>
