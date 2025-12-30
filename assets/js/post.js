@@ -26,98 +26,39 @@ async function loadMarkdownPost(filename) {
         // 修复URL编码问题：先解码再编码，确保只编码一次
         const decodedFilename = decodeURIComponent(filename);
         
-        // 构建完整URL，使用相对路径，确保在GitHub Pages上能正确访问
-        // 对于GitHub Pages，确保路径从根目录开始
-        let filePath;
-        
-        // 检查当前页面是否在GitHub Pages上
-        const isGitHubPages = window.location.hostname.includes('github.io');
-        
-        if (isGitHubPages) {
-            // GitHub Pages路径处理：确保从根目录开始
-            // 检查当前URL路径，处理可能的仓库名称前缀
-            const pathParts = window.location.pathname.split('/');
-            let repoName = '';
-            
-            // 如果路径包含仓库名称（通常是第二个部分）
-            if (pathParts.length > 2 && pathParts[1]) {
-                repoName = pathParts[1];
-            }
-            
-            // 构建完整路径
-            if (repoName) {
-                // 带有仓库名称的路径
-                filePath = `/${repoName}/_posts/${encodeURIComponent(decodedFilename)}`;
-            } else {
-                // 直接根目录
-                filePath = `/_posts/${encodeURIComponent(decodedFilename)}`;
-            }
-        } else {
-            // 本地开发环境，使用相对路径
-            filePath = `_posts/${encodeURIComponent(decodedFilename)}`;
-        }
-        
         console.log('=== 加载文章调试信息 ===');
         console.log('原始文件名:', filename);
         console.log('解码后文件名:', decodedFilename);
         console.log('当前页面URL:', window.location.href);
-        console.log('是否为GitHub Pages:', isGitHubPages);
-        console.log('请求路径:', filePath);
-        console.log('='.repeat(50));
         
-        // 加载Markdown文件，确保使用正确的编码
-        const response = await fetch(filePath, {
-            headers: {
-                'Accept': 'text/markdown; charset=utf-8'
-            }
-        });
+        // 从预先生成的数据中查找文章
+        console.log('从预先生成的数据中查找文章...');
         
-        if (!response.ok) {
-            console.error('HTTP错误:', response.status, response.statusText);
-            throw new Error(`文章不存在或无法访问 (HTTP ${response.status})`);
+        // 检查postsData是否可用
+        if (typeof postsData === 'undefined') {
+            throw new Error('文章数据未加载，请确保已引入posts-data.js文件');
         }
         
-        // 查看响应头信息
-        console.log('响应头信息:');
-        for (const [key, value] of response.headers.entries()) {
-            console.log(`  ${key}: ${value}`);
+        // 查找匹配的文章
+        const post = postsData.find(p => p.filename === decodedFilename);
+        
+        if (!post) {
+            console.error('文章未找到:', decodedFilename);
+            console.error('可用的文章:', postsData.map(p => p.filename));
+            throw new Error(`文章不存在: ${decodedFilename}`);
         }
         
-        // 使用response.text()直接获取文本内容，自动处理编码
-        let markdown;
-        try {
-            markdown = await response.text();
-            console.log('成功获取文章内容，长度:', markdown.length);
-            console.log('文章内容前500字符:', markdown.substring(0, 500) + '...');
-        } catch (textError) {
-            console.error('获取文本内容失败:', textError);
-            throw new Error('获取文章内容失败');
-        }
+        console.log('找到文章:', post.title);
+        console.log('文章内容长度:', post.content.length);
         
-        // 检查并修复可能的编码问题
-        function fixEncoding(str) {
-            // 确保输入是字符串
-            if (typeof str !== 'string') {
-                return '无效的内容';
-            }
-            
-            return str
-                .replace(/\uFEFF/g, '') // 移除BOM（字节顺序标记）
-                .replace(/\uFFFD/g, '?') // 替换无法识别的字符
-                .replace(/\r\n/g, '\n') // 统一换行符
-                .trim();
-        }
-        
-        const fixedMarkdown = fixEncoding(markdown);
-        console.log('修复编码后，内容长度:', fixedMarkdown.length);
-        
-        // 解析修复后的Markdown内容
-        const { frontMatter, content } = parseMarkdown(fixedMarkdown);
-        console.log('解析结果:', { frontMatter, contentLength: content.length });
-        console.log('解析后的正文前200字符:', content.substring(0, 200) + '...');
+        // 构建front matter
+        const frontMatter = {
+            title: post.title,
+            date: post.date
+        };
         
         // 渲染文章
-        renderPost(frontMatter, content);
+        renderPost(frontMatter, post.content);
         console.log('文章渲染完成');
         
     } catch (error) {
