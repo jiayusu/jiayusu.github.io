@@ -26,21 +26,43 @@ async function loadMarkdownPost(filename) {
         // 修复URL编码问题：先解码再编码，确保只编码一次
         const decodedFilename = decodeURIComponent(filename);
         
-        // 构建完整URL，使用绝对路径或确保相对路径正确
-        // 检查当前页面URL，确保路径正确
-        const currentUrl = new URL(window.location.href);
-        const baseUrl = `${currentUrl.protocol}//${currentUrl.host}${currentUrl.pathname.split('/').slice(0, -1).join('/')}/`;
+        // 构建完整URL，使用相对路径，确保在GitHub Pages上能正确访问
+        // 对于GitHub Pages，确保路径从根目录开始
+        let filePath;
         
-        const filePath = `_posts/${encodeURIComponent(decodedFilename)}`;
-        const fullUrl = new URL(filePath, baseUrl).href;
+        // 检查当前页面是否在GitHub Pages上
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        
+        if (isGitHubPages) {
+            // GitHub Pages路径处理：确保从根目录开始
+            // 检查当前URL路径，处理可能的仓库名称前缀
+            const pathParts = window.location.pathname.split('/');
+            let repoName = '';
+            
+            // 如果路径包含仓库名称（通常是第二个部分）
+            if (pathParts.length > 2 && pathParts[1]) {
+                repoName = pathParts[1];
+            }
+            
+            // 构建完整路径
+            if (repoName) {
+                // 带有仓库名称的路径
+                filePath = `/${repoName}/_posts/${encodeURIComponent(decodedFilename)}`;
+            } else {
+                // 直接根目录
+                filePath = `/_posts/${encodeURIComponent(decodedFilename)}`;
+            }
+        } else {
+            // 本地开发环境，使用相对路径
+            filePath = `_posts/${encodeURIComponent(decodedFilename)}`;
+        }
         
         console.log('=== 加载文章调试信息 ===');
         console.log('原始文件名:', filename);
         console.log('解码后文件名:', decodedFilename);
         console.log('当前页面URL:', window.location.href);
-        console.log('基本URL:', baseUrl);
-        console.log('相对路径:', filePath);
-        console.log('完整URL:', fullUrl);
+        console.log('是否为GitHub Pages:', isGitHubPages);
+        console.log('请求路径:', filePath);
         console.log('='.repeat(50));
         
         // 加载Markdown文件，确保使用正确的编码
