@@ -25,30 +25,173 @@ async function loadMarkdownPost(filename) {
             throw new Error('无效的文件名');
         }
         
-        // 构建完整URL
-        const filePath = `_posts/${encodeURIComponent(filename)}`;
+        // 构建完整URL，直接使用文件名
+        const filePath = `_posts/${filename}`;
         console.log('请求URL:', filePath);
         
-        // 加载Markdown文件
-        const response = await fetch(filePath);
-        
-        console.log('响应状态:', response.status);
-        
-        if (!response.ok) {
-            throw new Error(`文章不存在或无法访问 (HTTP ${response.status})`);
+        // 尝试直接访问文件
+        try {
+            // 加载Markdown文件
+            const response = await fetch(filePath);
+            
+            console.log('响应状态:', response.status);
+            
+            if (!response.ok) {
+                // 如果直接访问失败，尝试使用encodeURIComponent编码
+                console.log('直接访问失败，尝试使用URL编码...');
+                const encodedFilePath = `_posts/${encodeURIComponent(filename)}`;
+                console.log('尝试编码后的URL:', encodedFilePath);
+                const encodedResponse = await fetch(encodedFilePath);
+                
+                if (!encodedResponse.ok) {
+                    throw new Error(`文章不存在或无法访问 (HTTP ${encodedResponse.status})`);
+                }
+                
+                const markdown = await encodedResponse.text();
+                console.log('使用编码URL成功获取Markdown内容，长度:', markdown.length);
+                
+                // 解析Markdown内容
+                const { frontMatter, content } = parseMarkdown(markdown);
+                
+                // 渲染文章
+                renderPost(frontMatter, content);
+                return;
+            }
+            
+            const markdown = await response.text();
+            console.log('成功获取Markdown内容，长度:', markdown.length);
+            
+            // 解析Markdown内容
+            const { frontMatter, content } = parseMarkdown(markdown);
+            
+            // 渲染文章
+            renderPost(frontMatter, content);
+        } catch (error) {
+            // 如果fetch失败，尝试使用XMLHttpRequest作为备用方案
+            console.error('fetch请求失败，尝试使用XMLHttpRequest...', error);
+            loadMarkdownWithXHR(filename);
         }
-        
-        const markdown = await response.text();
-        console.log('成功获取Markdown内容，长度:', markdown.length);
-        
-        // 解析Markdown内容
-        const { frontMatter, content } = parseMarkdown(markdown);
-        
-        // 渲染文章
-        renderPost(frontMatter, content);
         
     } catch (error) {
         console.error('加载文章失败:', error);
+        document.getElementById('post-title').textContent = '错误';
+        document.getElementById('post-content').innerHTML = `
+            <p>加载文章失败: ${error.message}</p>
+            <p>请检查控制台获取更多详细信息。</p>
+            <p>可能的原因：</p>
+            <ul>
+                <li>文件名错误</li>
+                <li>文件路径错误</li>
+                <li>服务器配置问题</li>
+                <li>网络连接问题</li>
+            </ul>
+            <a href="index.html">返回首页</a>
+        `;
+    }
+}
+
+// 使用XMLHttpRequest加载Markdown文件（备用方案）
+function loadMarkdownWithXHR(filename) {
+    try {
+        const xhr = new XMLHttpRequest();
+        const filePath = `_posts/${filename}`;
+        
+        console.log('使用XMLHttpRequest请求:', filePath);
+        
+        xhr.open('GET', filePath, true);
+        
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log('XMLHttpRequest请求成功，状态:', xhr.status);
+                const markdown = xhr.responseText;
+                console.log('获取Markdown内容，长度:', markdown.length);
+                
+                // 解析Markdown内容
+                const { frontMatter, content } = parseMarkdown(markdown);
+                
+                // 渲染文章
+                renderPost(frontMatter, content);
+            } else {
+                // 如果直接访问失败，尝试使用encodeURIComponent编码
+                console.log('XMLHttpRequest直接访问失败，尝试使用URL编码...');
+                const encodedFilePath = `_posts/${encodeURIComponent(filename)}`;
+                console.log('尝试编码后的URL:', encodedFilePath);
+                
+                const encodedXhr = new XMLHttpRequest();
+                encodedXhr.open('GET', encodedFilePath, true);
+                
+                encodedXhr.onload = function() {
+                    if (encodedXhr.status === 200) {
+                        console.log('编码后XMLHttpRequest请求成功，状态:', encodedXhr.status);
+                        const markdown = encodedXhr.responseText;
+                        
+                        // 解析Markdown内容
+                        const { frontMatter, content } = parseMarkdown(markdown);
+                        
+                        // 渲染文章
+                        renderPost(frontMatter, content);
+                    } else {
+                        const error = new Error(`文章不存在或无法访问 (HTTP ${encodedXhr.status})`);
+                        console.error('加载文章失败:', error);
+                        document.getElementById('post-title').textContent = '错误';
+                        document.getElementById('post-content').innerHTML = `
+                            <p>加载文章失败: ${error.message}</p>
+                            <p>请检查控制台获取更多详细信息。</p>
+                            <p>可能的原因：</p>
+                            <ul>
+                                <li>文件名错误</li>
+                                <li>文件路径错误</li>
+                                <li>服务器配置问题</li>
+                                <li>网络连接问题</li>
+                            </ul>
+                            <a href="index.html">返回首页</a>
+                        `;
+                    }
+                };
+                
+                encodedXhr.onerror = function() {
+                    const error = new Error('网络错误，无法访问文章');
+                    console.error('XMLHttpRequest请求错误:', error);
+                    document.getElementById('post-title').textContent = '错误';
+                    document.getElementById('post-content').innerHTML = `
+                        <p>加载文章失败: ${error.message}</p>
+                        <p>请检查控制台获取更多详细信息。</p>
+                        <p>可能的原因：</p>
+                        <ul>
+                            <li>文件名错误</li>
+                            <li>文件路径错误</li>
+                            <li>服务器配置问题</li>
+                            <li>网络连接问题</li>
+                        </ul>
+                        <a href="index.html">返回首页</a>
+                    `;
+                };
+                
+                encodedXhr.send();
+            }
+        };
+        
+        xhr.onerror = function() {
+            const error = new Error('网络错误，无法访问文章');
+            console.error('XMLHttpRequest请求错误:', error);
+            document.getElementById('post-title').textContent = '错误';
+            document.getElementById('post-content').innerHTML = `
+                <p>加载文章失败: ${error.message}</p>
+                <p>请检查控制台获取更多详细信息。</p>
+                <p>可能的原因：</p>
+                <ul>
+                    <li>文件名错误</li>
+                    <li>文件路径错误</li>
+                    <li>服务器配置问题</li>
+                    <li>网络连接问题</li>
+                </ul>
+                <a href="index.html">返回首页</a>
+            `;
+        };
+        
+        xhr.send();
+    } catch (error) {
+        console.error('XMLHttpRequest请求失败:', error);
         document.getElementById('post-title').textContent = '错误';
         document.getElementById('post-content').innerHTML = `
             <p>加载文章失败: ${error.message}</p>
