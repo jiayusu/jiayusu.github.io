@@ -26,17 +26,33 @@ async function loadMarkdownPost(filename) {
         // 构建完整URL
         const filePath = `_posts/${encodeURIComponent(filename)}`;
         
-        // 加载Markdown文件
-        const response = await fetch(filePath);
+        // 加载Markdown文件，确保使用正确的编码
+        const response = await fetch(filePath, {
+            headers: {
+                'Accept': 'text/markdown; charset=utf-8'
+            }
+        });
         
         if (!response.ok) {
             throw new Error(`文章不存在或无法访问 (HTTP ${response.status})`);
         }
         
+        // 确保使用UTF-8编码解析文本
         const markdown = await response.text();
         
-        // 解析Markdown内容
-        const { frontMatter, content } = parseMarkdown(markdown);
+        // 检查并修复可能的编码问题
+        function fixEncoding(str) {
+            // 修复常见的编码问题
+            return str
+                .replace(/\uFFFD/g, '') // 移除替换字符
+                .replace(/\r\n/g, '\n') // 统一换行符
+                .trim();
+        }
+        
+        const fixedMarkdown = fixEncoding(markdown);
+        
+        // 解析修复后的Markdown内容
+        const { frontMatter, content } = parseMarkdown(fixedMarkdown);
         
         // 渲染文章
         renderPost(frontMatter, content);
@@ -70,30 +86,35 @@ function parseMarkdown(markdown) {
     };
     let content = markdown;
     
-    // 尝试解析front matter
-    if (markdown.startsWith('---\n')) {
-        const endOfFrontMatter = markdown.indexOf('\n---\n', 4);
-        if (endOfFrontMatter !== -1) {
-            const frontMatterString = markdown.substring(4, endOfFrontMatter);
-            content = markdown.substring(endOfFrontMatter + 5).trim();
+    // 确保markdown是字符串
+    if (typeof markdown !== 'string') {
+        return { frontMatter, content: '无效的Markdown内容' };
+    }
+    
+    // 简单的front matter解析
+    const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
+    const match = markdown.match(frontMatterRegex);
+    
+    if (match) {
+        const frontMatterString = match[1];
+        content = match[2].trim();
+        
+        // 解析front matter
+        const lines = frontMatterString.split('\n');
+        lines.forEach(line => {
+            const trimmedLine = line.trim();
+            if (trimmedLine === '') return;
             
-            // 解析front matter
-            const lines = frontMatterString.split('\n');
-            lines.forEach(line => {
-                const trimmedLine = line.trim();
-                if (trimmedLine === '') return;
-                
-                const colonIndex = trimmedLine.indexOf(':');
-                if (colonIndex === -1) return;
-                
-                const key = trimmedLine.substring(0, colonIndex).trim();
-                const value = trimmedLine.substring(colonIndex + 1).trim().replace(/^['"](.*)['"]$/, '$1');
-                
-                if (key && value) {
-                    frontMatter[key.toLowerCase()] = value;
-                }
-            });
-        }
+            const colonIndex = trimmedLine.indexOf(':');
+            if (colonIndex === -1) return;
+            
+            const key = trimmedLine.substring(0, colonIndex).trim();
+            const value = trimmedLine.substring(colonIndex + 1).trim().replace(/^['"](.*)['"]$/, '$1');
+            
+            if (key && value) {
+                frontMatter[key.toLowerCase()] = value;
+            }
+        });
     }
     
     // 如果没有从front matter中提取到标题，尝试从内容中提取
