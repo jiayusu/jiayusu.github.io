@@ -4,158 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的博客</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* 仅保留最基本的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .help {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <span class="logo-text">我的博客</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-link active">首页</a></li>
-                <li><a href="#articles" class="nav-link">文章</a></li>
-                <li><a href="#about" class="nav-link">关于我</a></li>
-                <li><a href="#contact" class="nav-link">联系</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="菜单开关">
-                <span class="menu-icon"></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero区域 -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="hero-title-line">记录技术与思考</span>
-                    <span class="hero-title-line">分享成长与感悟</span>
-                </h1>
-                <p class="hero-subtitle">专注于技术开发、产品设计与个人成长的分享平台</p>
-                <a href="#articles" class="btn btn-primary">查看文章</a>
-            </div>
-        </div>
-    </header>
-
+    <h1>我的博客</h1>
+    
     <!-- 文章列表 -->
-    <section id="articles" class="articles">
-        <div class="container">
-            <h2 class="section-title">最新文章</h2>
-            <div class="articles-grid">
-                <!-- 文章卡片1 -->
-                <article class="article-card">
-                    <div class="article-card-content">
-                        <div class="article-meta">
-                            <span class="article-date">2025-11-24</span>
-                            <span class="article-category">BLOG</span>
-                        </div>
-                        <h3 class="article-title">
-                            <a href="post.html?file=2025-11-24-3D扫描生成与打印.md" class="article-link">3D扫描、生成与打印</a>
-                        </h3>
-                        <p class="article-excerpt">探讨3D扫描、生成与打印技术的发展和应用，以及如何降低3D建模门槛。</p>
-                        <div class="article-tags">
-                            <span class="tag">3D</span>
-                            <span class="tag">扫描</span>
-                            <span class="tag">打印</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="view-more">
-                <a href="posts.html" class="btn btn-outline">查看更多</a>
-            </div>
-        </div>
-    </section>
-
+    <h2>文章列表</h2>
+    <ul id="articles">
+        <li>
+            <a href="post.html?file=2025-11-24-3D扫描生成与打印.md">3D扫描、生成与打印</a>
+            <span> (2025-11-24)</span>
+        </li>
+        <li>
+            <a href="post.html?file=2025-11-30-分析EEG%E2%80%91Driven%20AR%E2%80%91Robot%20System%20for%20Zero%E2%80%9ETouch%20Grasping%20Manipulation.md">分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation</a>
+            <span> (2025-11-30)</span>
+        </li>
+        <li>
+            <a href="post.html?file=2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点.md">智能网联汽车在智慧城市部署的技术、架构与治理要点</a>
+            <span> (2025-11-30)</span>
+        </li>
+        <li>
+            <a href="post.html?file=2025-12-01.md">2025-12-01</a>
+            <span> (2025-12-01)</span>
+        </li>
+        <li>
+            <a href="post.html?file=2025-12-07-读田渊栋五年总结.md">读田渊栋五年总结</a>
+            <span> (2025-12-07)</span>
+        </li>
+        <li>
+            <a href="post.html?file=2025-12-15-toolbox.md">toolbox</a>
+            <span> (2025-12-15)</span>
+        </li>
+        <li>
+            <a href="post.html?file=2025-12-16.md">2025-12-16</a>
+            <span> (2025-12-16)</span>
+        </li>
+    </ul>
+    
     <!-- 关于我 -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">关于我</h2>
-                    <p class="about-description">
-                        我是一名技术爱好者，专注于人工智能、机器学习和产品设计领域。
-                        这个博客是我记录技术学习、产品思考和个人成长的地方。
-                        我希望通过分享我的经验和感悟，能够帮助到更多的人。
-                    </p>
-                    <p class="about-description">
-                        在这里，你可以找到关于技术开发、产品设计、读书感悟等方面的内容。
-                        我会定期更新博客，分享我在学习和工作中的收获和思考。
-                    </p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">技术文章</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">项目经验</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">年技术积累</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系 -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">联系我</h2>
-            <div class="contact-content">
-                <p class="contact-description">
-                    如果你对我的文章感兴趣，或者有任何问题想要交流，欢迎通过以下方式联系我。
-                </p>
-                <div class="contact-links">
-                    <a href="#" class="contact-link">
-                        <span class="contact-link-icon">📧</span>
-                        <span class="contact-link-text">邮箱</span>
-                    </a>
-                    <a href="#" class="contact-link">
-                        <span class="contact-link-icon">🐱</span>
-                        <span class="contact-link-text">GitHub</span>
-                    </a>
-                    <a href="#" class="contact-link">
-                        <span class="contact-link-icon">🔗</span>
-                        <span class="contact-link-text">LinkedIn</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3 class="footer-logo">我的博客</h3>
-                    <p class="footer-description">记录技术与思考，分享成长与感悟</p>
-                </div>
-                <div class="footer-links">
-                    <h4 class="footer-links-title">快速链接</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="index.html" class="footer-link">首页</a></li>
-                        <li><a href="#articles" class="footer-link">文章</a></li>
-                        <li><a href="#about" class="footer-link">关于我</a></li>
-                        <li><a href="#contact" class="footer-link">联系</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 我的博客. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
+    <h2>关于我</h2>
+    <div id="about">
+        <p>我是一名技术爱好者，专注于人工智能、机器学习和产品设计领域。</p>
+        <p>这个博客是我记录技术学习、产品思考和个人成长的地方。我希望通过分享我的经验和感悟，能够帮助到更多的人。</p>
+        <p>在这里，你可以找到关于技术开发、产品设计、读书感悟等方面的内容。我会定期更新博客，分享我在学习和工作中的收获和思考。</p>
+    </div>
+    
+    <!-- 帮助信息 -->
+    <div class="help">
+        快捷键: ? 显示帮助, H 首页, A 文章列表, P 个人介绍, ↑/↓ 导航, Enter 选择, Q 退出
+    </div>
+    
+    <!-- 快捷键脚本 -->
+    <script src="assets/js/keyboard.js"></script>
 </body>
 </html>
