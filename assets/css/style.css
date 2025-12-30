@@ -1,43 +1,43 @@
-/* CSS变量 */
+/* CSS变量 - 重新设计的淡雅风格 */
 :root {
-    /* 颜色 */
-    --primary-color: #4f46e5;
-    --primary-hover: #4338ca;
-    --secondary-color: #f0f9ff;
-    --accent-color: #06b6d4;
+    /* 颜色 - 淡雅柔和的配色方案 */
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary-color: #f8fafc;
+    --accent-color: #0ea5e9;
     --background-color: #ffffff;
-    --surface-color: #fafafa;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --border-color: #e5e7eb;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --surface-color: #ffffff;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
     
-    /* 字体 */
+    /* 字体 - 更加优雅的排版 */
     --font-serif: 'Noto Serif SC', serif;
     --font-sans: 'Inter', sans-serif;
     
-    /* 间距 */
+    /* 间距 - 更加宽松舒适的间距 */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-2xl: 3rem;
-    --spacing-3xl: 4rem;
+    --spacing-lg: 1.75rem;
+    --spacing-xl: 2.5rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
     
-    /* 圆角 */
-    --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
+    /* 圆角 - 更加柔和的圆角 */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
     
-    /* 过渡 */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    /* 过渡 - 更加流畅的动画 */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+    --transition-slow: 0.7s ease;
 }
 
 /* 重置样式 */
@@ -114,74 +114,80 @@ a:hover {
 /* 按钮样式 */
 .btn {
     display: inline-block;
-    padding: var(--spacing-md) var(--spacing-xl);
-    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    border-radius: var(--radius-md);
+    border-radius: 50px;
     transition: all var(--transition-normal);
     cursor: pointer;
     border: none;
     outline: none;
+    letter-spacing: 0.01em;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
     color: white;
 }
 
 .btn-outline {
     background-color: transparent;
     color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: white;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
 }
 
-/* 导航栏 */
+/* 导航栏 - 优雅简约设计 */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 1000;
     transition: all var(--transition-normal);
+    padding: 0;
 }
 
 .navbar.scrolled {
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) var(--spacing-xl);
+    padding: 1.25rem var(--spacing-xl);
 }
 
 .logo {
     display: flex;
     align-items: center;
     font-family: var(--font-serif);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 600;
     color: var(--text-primary);
+    letter-spacing: -0.02em;
 }
 
 .logo-text {
@@ -194,15 +200,17 @@ a:hover {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: var(--spacing-xl);
+    gap: 2.5rem;
 }
 
 .nav-link {
-    color: var(--text-primary);
-    font-weight: 500;
-    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 0.75rem 0;
     position: relative;
-    transition: color var(--transition-fast);
+    transition: all var(--transition-normal);
+    letter-spacing: 0.01em;
 }
 
 .nav-link::after {
@@ -211,14 +219,15 @@ a:hover {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: var(--primary-color);
     transition: width var(--transition-normal);
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .nav-link:hover::after,
@@ -231,14 +240,14 @@ a:hover {
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: var(--spacing-sm);
+    padding: 0.75rem;
     z-index: 1001;
 }
 
 .menu-icon {
     display: block;
-    width: 24px;
-    height: 2px;
+    width: 22px;
+    height: 1.5px;
     background-color: var(--text-primary);
     position: relative;
     transition: all var(--transition-normal);
@@ -248,100 +257,130 @@ a:hover {
 .menu-icon::after {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 2px;
+    width: 22px;
+    height: 1.5px;
     background-color: var(--text-primary);
     transition: all var(--transition-normal);
 }
 
 .menu-icon::before {
-    top: -8px;
+    top: -6.5px;
 }
 
 .menu-icon::after {
-    top: 8px;
+    top: 6.5px;
 }
 
-/* Hero区域 */
+/* Hero区域 - 淡雅现代设计 */
 .hero {
-    padding: var(--spacing-3xl) 0;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, var(--secondary-color) 0%, #ffffff 100%);
     margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: var(--spacing-xl);
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .hero-title-line {
     display: block;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 0.75rem;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: 2.5rem;
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease 0.2s forwards;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease 0.2s forwards;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .hero .btn {
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease 0.4s forwards;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease 0.4s forwards;
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
 }
 
-/* 文章列表 */
+/* 文章列表 - 优雅卡片设计 */
 .articles {
-    padding: var(--spacing-3xl) 0;
+    padding: 5rem 0;
     background-color: var(--background-color);
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: 4rem;
     position: relative;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
+    width: 60px;
+    height: 2px;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    border-radius: 2px;
+    border-radius: 1px;
 }
 
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--spacing-2xl);
-    margin-bottom: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 .article-card {
-    background-color: var(--background-color);
-    border-radius: var(--radius-lg);
+    background-color: var(--surface-color);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-normal);
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     animation: fadeUp 0.6s ease forwards;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
 }
 
 .article-card:nth-child(1) { animation-delay: 0.1s; }
@@ -352,19 +391,20 @@ a:hover {
 .article-card:nth-child(6) { animation-delay: 0.6s; }
 
 .article-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(99, 102, 241, 0.2);
 }
 
 .article-card-content {
-    padding: var(--spacing-xl);
+    padding: 1.75rem;
 }
 
 .article-meta {
     display: flex;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-    font-size: 0.875rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
 }
 
@@ -374,16 +414,20 @@ a:hover {
 }
 
 .article-category {
-    background-color: var(--secondary-color);
+    background-color: rgba(99, 102, 241, 0.08);
     color: var(--primary-color);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
     font-weight: 500;
+    font-size: 0.8rem;
 }
 
 .article-title {
-    margin-bottom: var(--spacing-md);
-    font-size: 1.5rem;
+    margin-bottom: 0.875rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
 }
 
 .article-link {
@@ -396,27 +440,30 @@ a:hover {
 }
 
 .article-excerpt {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: 1rem;
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 .article-tags {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .tag {
     font-size: 0.75rem;
     color: var(--text-secondary);
-    background-color: var(--surface-color);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--radius-sm);
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
     transition: all var(--transition-fast);
+    font-weight: 400;
 }
 
 .tag:hover {
-    background-color: var(--secondary-color);
+    background-color: rgba(99, 102, 241, 0.1);
     color: var(--primary-color);
 }
 
@@ -424,67 +471,119 @@ a:hover {
     text-align: center;
 }
 
-/* 关于我 */
+/* 关于我 - 优雅设计 */
 .about {
-    padding: var(--spacing-3xl) 0;
-    background-color: var(--surface-color);
+    padding: 5rem 0;
+    background-color: #fafbfc;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
 }
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--spacing-2xl);
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
     align-items: center;
 }
 
 .about-text {
     opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeLeft 0.8s ease forwards;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.about-text .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.about-text .section-title::after {
+    left: 0;
+    transform: none;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
 }
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-xl);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
     opacity: 0;
-    transform: translateX(30px);
-    animation: fadeRight 0.8s ease forwards;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease 0.2s forwards;
 }
 
 .stat-item {
     text-align: center;
-    padding: var(--spacing-xl);
-    background-color: var(--background-color);
-    border-radius: var(--radius-lg);
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-normal);
+    border: 1px solid var(--border-color);
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
+    border-color: rgba(99, 102, 241, 0.2);
 }
 
 .stat-number {
     display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 600;
     color: var(--primary-color);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 .stat-label {
     display: block;
     font-size: 0.875rem;
     color: var(--text-secondary);
-    font-weight: 500;
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.02em;
 }
 
-/* 联系 */
+/* 联系 - 简约优雅设计 */
 .contact {
-    padding: var(--spacing-3xl) 0;
+    padding: 5rem 0;
     background-color: var(--background-color);
+    position: relative;
+}
+
+.contact::before,
+.contact::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.contact::before {
+    top: 0;
+}
+
+.contact::after {
+    bottom: 0;
 }
 
 .contact-content {
@@ -492,19 +591,26 @@ a:hover {
     margin: 0 auto;
     text-align: center;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     animation: fadeUp 0.8s ease forwards;
+    position: relative;
+}
+
+.contact-content .section-title {
+    margin-bottom: 1.5rem;
 }
 
 .contact-description {
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: 2.5rem;
     font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-xl);
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -512,91 +618,107 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: 0.75rem;
     color: var(--text-primary);
     transition: all var(--transition-normal);
-    padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border-radius: var(--radius-xl);
     background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    min-width: 120px;
 }
 
 .contact-link:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     color: var(--primary-color);
+    border-color: rgba(99, 102, 241, 0.2);
 }
 
 .contact-link-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .contact-link-text {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
 }
 
-/* 页脚 */
+/* 页脚 - 简约优雅设计 */
 .footer {
-    background-color: var(--text-primary);
-    color: white;
-    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+    background-color: #fafbfc;
+    color: var(--text-secondary);
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-2xl);
-    margin-bottom: var(--spacing-2xl);
+    gap: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .footer-info {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     animation: fadeUp 0.8s ease forwards;
 }
 
 .footer-logo {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
-    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    font-weight: 600;
 }
 
 .footer-description {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .footer-links-title {
-    font-size: 1.125rem;
-    margin-bottom: var(--spacing-md);
-    color: white;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    letter-spacing: 0.01em;
 }
 
 .footer-links-list {
     list-style: none;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     animation: fadeUp 0.8s ease 0.2s forwards;
 }
 
 .footer-links-list li {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.75rem;
 }
 
 .footer-link {
-    color: rgba(255, 255, 255, 0.7);
-    transition: color var(--transition-fast);
+    color: var(--text-secondary);
+    transition: all var(--transition-normal);
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    display: inline-block;
 }
 
 .footer-link:hover {
-    color: white;
+    color: var(--primary-color);
+    transform: translateX(4px);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
 }
 
 /* 动画效果 */
