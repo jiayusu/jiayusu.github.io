@@ -23,7 +23,7 @@ async function loadMarkdownPost(filename) {
             throw new Error('无效的文件名');
         }
         
-        // 构建完整URL
+        // 构建完整URL，确保中文文件名被正确编码
         const filePath = `_posts/${encodeURIComponent(filename)}`;
         
         // 加载Markdown文件，确保使用正确的编码
@@ -37,14 +37,30 @@ async function loadMarkdownPost(filename) {
             throw new Error(`文章不存在或无法访问 (HTTP ${response.status})`);
         }
         
-        // 确保使用UTF-8编码解析文本
-        const markdown = await response.text();
+        // 使用arrayBuffer和TextDecoder确保UTF-8编码，处理BOM
+        const arrayBuffer = await response.arrayBuffer();
+        const decoder = new TextDecoder('utf-8', { fatal: true, ignoreBOM: true });
+        let markdown;
+        
+        try {
+            markdown = decoder.decode(arrayBuffer);
+        } catch (decodingError) {
+            console.warn('UTF-8解码失败，尝试使用windows-1252兼容模式:', decodingError);
+            // 尝试使用更宽容的编码解码
+            const fallbackDecoder = new TextDecoder('windows-1252', { fatal: false });
+            markdown = fallbackDecoder.decode(arrayBuffer);
+        }
         
         // 检查并修复可能的编码问题
         function fixEncoding(str) {
-            // 修复常见的编码问题
+            // 确保输入是字符串
+            if (typeof str !== 'string') {
+                return '无效的内容';
+            }
+            
             return str
-                .replace(/\uFFFD/g, '') // 移除替换字符
+                .replace(/\uFEFF/g, '') // 移除BOM（字节顺序标记）
+                .replace(/\uFFFD/g, '?') // 替换无法识别的字符
                 .replace(/\r\n/g, '\n') // 统一换行符
                 .trim();
         }
@@ -65,18 +81,113 @@ async function loadMarkdownPost(filename) {
 
 // 显示错误信息
 function showError(message) {
+    // 确保message是字符串
+    if (typeof message !== 'string') {
+        message = '未知错误';
+    }
+    
     document.getElementById('post-title').textContent = '错误';
+    
+    // 分析错误类型，提供更具体的解决方案
+    let errorType = 'general';
+    let solution = '';
+    
+    if (message.includes('不存在') || message.includes('404')) {
+        errorType = 'not-found';
+        solution = '<p>请检查文章是否存在，或返回首页浏览所有文章。</p>';
+    } else if (message.includes('编码') || message.includes('解码') || message.includes('UTF-8')) {
+        errorType = 'encoding';
+        solution = '<p>文章文件可能存在编码问题，请确保使用UTF-8编码保存Markdown文件。</p>';
+    } else if (message.includes('网络') || message.includes('连接')) {
+        errorType = 'network';
+        solution = '<p>请检查网络连接，或稍后重试。</p>';
+    }
+    
     document.getElementById('post-content').innerHTML = `
-        <p>${message}</p>
-        <p>可能的原因：</p>
-        <ul>
-            <li>文件名错误</li>
-            <li>文件路径错误</li>
-            <li>服务器配置问题</li>
-            <li>网络连接问题</li>
-        </ul>
-        <a href="index.html">返回首页</a>
+        <div class="error-container">
+            <h2>错误信息</h2>
+            <p>${message}</p>
+            
+            <h3>可能的原因：</h3>
+            <ul>
+                <li>文件名错误或文章已被删除</li>
+                <li>文件路径错误</li>
+                <li>文件编码格式不正确（建议使用UTF-8）</li>
+                <li>网络连接问题</li>
+                <li>服务器配置问题</li>
+            </ul>
+            
+            ${solution}
+            
+            <div class="error-actions">
+                <a href="index.html" class="btn-primary">返回首页</a>
+                <a href="posts.html" class="btn-secondary">浏览所有文章</a>
+            </div>
+            
+            <div class="debug-info">
+                <h4>调试信息：</h4>
+                <p>当前时间：${new Date().toLocaleString()}</p>
+                <p>请求URL：${window.location.href}</p>
+            </div>
+        </div>
     `;
+    
+    // 添加一些基本样式
+    const style = document.createElement('style');
+    style.textContent = `
+        .error-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+        .error-container h2 {
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+        .error-container h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .error-container ul {
+            margin-left: 1.5rem;
+        }
+        .error-actions {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .btn-primary {
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-secondary {
+            padding: 0.5rem 1rem;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .debug-info {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    `;
+    document.head.appendChild(style);
 }
 
 // 解析Markdown，提取front matter和内容

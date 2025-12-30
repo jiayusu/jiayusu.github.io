@@ -1,0 +1,24 @@
+# 统一使用LF行结束符
+* text=auto eol=lf
+
+# 二进制文件不转换
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.rar binary
+
+# 文本文件明确指定使用LF
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+
+# 配置文件使用LF
+*.gitignore text eol=lf
+Makefile text eol=lf
