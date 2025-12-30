@@ -29,6 +29,54 @@
         a:hover {
             text-decoration: underline;
         }
+        .nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .nav ul {
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .article-meta {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .article-tags {
+            margin-top: 5px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
         .help {
             position: fixed;
             bottom: 10px;
@@ -39,55 +87,93 @@
     </style>
 </head>
 <body>
-    <h1>我的博客</h1>
-    
-    <!-- 文章列表 -->
-    <h2>文章列表</h2>
-    <ul id="articles">
-        <li>
-            <a href="post.html?file=2025-11-24-3D扫描生成与打印.md">3D扫描、生成与打印</a>
-            <span> (2025-11-24)</span>
-        </li>
-        <li>
-            <a href="post.html?file=2025-11-30-分析EEG-Driven%20AR-Robot%20System%20for%20Zero-Touch%20Grasping%20Manipulation.md">分析EEG-Driven AR-Robot System for Zero-Touch Grasping Manipulation</a>
-            <span> (2025-11-30)</span>
-        </li>
-        <li>
-            <a href="post.html?file=2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点.md">智能网联汽车在智慧城市部署的技术、架构与治理要点</a>
-            <span> (2025-11-30)</span>
-        </li>
-        <li>
-            <a href="post.html?file=2025-12-01.md">2025-12-01</a>
-            <span> (2025-12-01)</span>
-        </li>
-        <li>
-            <a href="post.html?file=2025-12-07-读田渊栋五年总结.md">读田渊栋五年总结</a>
-            <span> (2025-12-07)</span>
-        </li>
-        <li>
-            <a href="post.html?file=2025-12-15-toolbox.md">toolbox</a>
-            <span> (2025-12-15)</span>
-        </li>
-        <li>
-            <a href="post.html?file=2025-12-16.md">2025-12-16</a>
-            <span> (2025-12-16)</span>
-        </li>
-    </ul>
-    
-    <!-- 关于我 -->
-    <h2>关于我</h2>
-    <div id="about">
-        <p>我是一名技术爱好者，专注于人工智能、机器学习和产品设计领域。</p>
-        <p>这个博客是我记录技术学习、产品思考和个人成长的地方。我希望通过分享我的经验和感悟，能够帮助到更多的人。</p>
-        <p>在这里，你可以找到关于技术开发、产品设计、读书感悟等方面的内容。我会定期更新博客，分享我在学习和工作中的收获和思考。</p>
+    <div class="container">
+        <!-- 导航栏 -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="posts.html">所有文章</a></li>
+                <li><a href="#categories">分类</a></li>
+                <li><a href="#archive">归档</a></li>
+                <li><a href="#about">关于我</a></li>
+            </ul>
+        </nav>
+        
+        <!-- 博客标题 -->
+        <h1>我的博客</h1>
+        
+        <!-- 最新文章 -->
+        <h2>最新文章</h2>
+        <div id="latest-articles">
+            <div class="article-item">
+                <a href="post.html?file=2025-11-24-3D扫描生成与打印.md">3D扫描、生成与打印</a>
+                <div class="article-meta">2025-11-24</div>
+                <div class="article-tags">
+                    <span class="tag">3D</span>
+                    <span class="tag">扫描</span>
+                    <span class="tag">打印</span>
+                </div>
+            </div>
+            <div class="article-item">
+                <a href="post.html?file=2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点.md">智能网联汽车在智慧城市部署的技术、架构与治理要点</a>
+                <div class="article-meta">2025-11-30</div>
+                <div class="article-tags">
+                    <span class="tag">智能网联汽车</span>
+                    <span class="tag">智慧城市</span>
+                    <span class="tag">技术架构</span>
+                </div>
+            </div>
+            <div class="article-item">
+                <a href="post.html?file=2025-12-07-读田渊栋五年总结.md">读田渊栋五年总结</a>
+                <div class="article-meta">2025-12-07</div>
+                <div class="article-tags">
+                    <span class="tag">读书感悟</span>
+                    <span class="tag">个人成长</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 查看更多文章 -->
+        <div style="margin: 20px 0;">
+            <a href="posts.html">查看更多文章 →</a>
+        </div>
+        
+        <!-- 分类 -->
+        <h2 id="categories">文章分类</h2>
+        <ul>
+            <li><a href="posts.html?category=技术">技术 (3)</a></li>
+            <li><a href="posts.html?category=读书">读书 (1)</a></li>
+            <li><a href="posts.html?category=个人成长">个人成长 (1)</a></li>
+            <li><a href="posts.html?category=其他">其他 (2)</a></li>
+        </ul>
+        
+        <!-- 归档 -->
+        <h2 id="archive">文章归档</h2>
+        <ul>
+            <li><a href="posts.html?year=2025&month=12">2025年12月 (3)</a></li>
+            <li><a href="posts.html?year=2025&month=11">2025年11月 (3)</a></li>
+        </ul>
+        
+        <!-- 关于我 -->
+        <h2 id="about">关于我</h2>
+        <div>
+            <p>我是一名技术爱好者，专注于人工智能、机器学习和产品设计领域。</p>
+            <p>这个博客是我记录技术学习、产品思考和个人成长的地方。我希望通过分享我的经验和感悟，能够帮助到更多的人。</p>
+            <p>在这里，你可以找到关于技术开发、产品设计、读书感悟等方面的内容。我会定期更新博客，分享我在学习和工作中的收获和思考。</p>
+        </div>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>&copy; 2025 我的博客. All rights reserved.</p>
+        </footer>
+        
+        <!-- 帮助信息 -->
+        <div class="help">
+            快捷键: ? 显示帮助, H 首页, A 文章列表, P 个人介绍, ↑/↓ 导航, Enter 选择, Q 退出
+        </div>
+        
+        <!-- 快捷键脚本 -->
+        <script src="assets/js/keyboard.js"></script>
     </div>
-    
-    <!-- 帮助信息 -->
-    <div class="help">
-        快捷键: ? 显示帮助, H 首页, A 文章列表, P 个人介绍, ↑/↓ 导航, Enter 选择, Q 退出
-    </div>
-    
-    <!-- 快捷键脚本 -->
-    <script src="assets/js/keyboard.js"></script>
 </body>
 </html>
