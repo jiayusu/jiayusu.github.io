@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D扫描、生成与打印 - 我的博客</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">我的博客</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">首页</a></li>
+                <li><a href="../index.html#articles" class="nav-link active">文章</a></li>
+                <li><a href="../index.html#about" class="nav-link">关于我</a></li>
+                <li><a href="../index.html#contact" class="nav-link">联系</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="菜单开关">
+                <span class="menu-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 文章内容 -->
+    <main class="post">
+        <div class="container">
+            <article class="post-content">
+                <!-- 文章头部 -->
+                <header class="post-header">
+                    <div class="post-meta">
+                        <span class="post-date">2025-11-24</span>
+                        <span class="post-category">BLOG</span>
+                    </div>
+                    <h1 class="post-title">3D扫描、生成与打印</h1>
+                    <div class="post-tags">
+                        <span class="tag">3D</span>
+                        <span class="tag">扫描</span>
+                        <span class="tag">打印</span>
+                    </div>
+                </header>
+
+                <!-- 文章正文 -->
+                <div class="post-body">
+                    <p>from 脑放电波</p>
+
+                    <p>问题1:为什么在一两年内3D建模所需门槛快速降低？</p>
+                    <p>问题2:为什么普通人能成为3D建模的创作者？</p>
+
+                    <p>嘉宾1:Elegoo<br>
+                    嘉宾2:Kiri engine<br>
+                    嘉宾3:Remy</p>
+
+                    <p>人工3D建模耗时长，所以想用3D扫描仪把现实物体快速变成3D模型，但3D扫描仪贵，有没有办法便宜？</p>
+
+                    <h2>为什么3D扫描仪贵？</h2>
+
+                    <ul>
+                        <li>扫描仪有摄像头、光源、处理3D的芯片这些模组，要买得买一整套，成本大</li>
+                    </ul>
+
+                    <p>但手机上有摄像头、芯片模组，如果在手机上加光机，理论上手机能变成3D扫描仪</p>
+
+                    <p>但手机是变焦镜头，3D扫描仪需要严格固定相机焦段才能做到精确校准</p>
+
+                    <p>理论上能用手机厂商提供的相机SDK固定焦段，但实际没法固定，扫描效果特别差</p>
+
+                    <p>实际上用户对质量的容忍度低，哪怕价格打下来了</p>
+
+                    <p>因为那时候主要不是拿来玩，而是干活</p>
+
+                    <p>发现了更好的算法，实现纯手机做3D扫描，摄影测量法</p>
+
+                    <p>之前用CPU需要跑几个小时，如果放到CUDA上只要几分钟</p>
+
+                    <p>而且21年云端开始有GPU</p>
+
+                    <p>所以让手机拍照上传照片到云端，在云端进行加速建模</p>
+
+                    <h2>3D高斯泼溅</h2>
+
+                    <h2>行业的关键节点：</h2>
+
+                    <ul>
+                        <li>AIGC爆发</li>
+                        <li>硬件更新</li>
+                        <li>3D打印的基础专利解绑</li>
+                    </ul>
+
+                    <h2>光固化</h2>
+                </div>
+
+                <!-- 文章底部 -->
+                <footer class="post-footer">
+                    <div class="post-share">
+                        <h3>分享文章</h3>
+                        <div class="share-links">
+                            <a href="#" class="share-link">微信</a>
+                            <a href="#" class="share-link">微博</a>
+                            <a href="#" class="share-link">知乎</a>
+                            <a href="#" class="share-link">GitHub</a>
+                        </div>
+                    </div>
+                </footer>
+            </article>
+
+            <!-- 文章导航 -->
+            <nav class="post-nav">
+                <div class="post-nav-item prev">
+                    <a href="#" class="post-nav-link">
+                        <span class="nav-label">上一篇</span>
+                        <span class="nav-title">没有了</span>
+                    </a>
+                </div>
+                <div class="post-nav-item next">
+                    <a href="2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点.html" class="post-nav-link">
+                        <span class="nav-label">下一篇</span>
+                        <span class="nav-title">智能网联汽车在智慧城市部署的技术、架构与治理要点</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-logo">我的博客</h3>
+                    <p class="footer-description">记录技术与思考，分享成长与感悟</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-links-title">快速链接</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="../index.html" class="footer-link">首页</a></li>
+                        <li><a href="../index.html#articles" class="footer-link">文章</a></li>
+                        <li><a href="../index.html#about" class="footer-link">关于我</a></li>
+                        <li><a href="../index.html#contact" class="footer-link">联系</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 我的博客. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

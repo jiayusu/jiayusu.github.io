@@ -1,9 +1,0 @@
----
-layout: page
-title: BOOKS
-permalink: /categories/BOOKS/
----
-
-{% for post in site.categories.BOOKS %}
-- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%Y-%m-%d" }}
-{% endfor %}
