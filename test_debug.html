@@ -1,0 +1,71 @@
+// 测试脚本：直接在浏览器中运行，用于调试Markdown加载问题
+console.log('=== Markdown加载调试脚本 ===');
+
+// 测试文件名
+const testFiles = [
+    "2025-11-24-3D扫描生成与打印.md",
+    "2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation.md",
+    "2025-12-01.md"
+];
+
+// 模拟post.js中的URL处理逻辑
+function testUrlHandling(filename) {
+    console.log(`\n测试文件名: ${filename}`);
+    
+    // 原始URL编码
+    const encoded1 = encodeURIComponent(filename);
+    console.log(`encodeURIComponent: ${encoded1}`);
+    
+    // 模拟post.js中的处理：先解码再编码
+    const decoded = decodeURIComponent(filename);
+    console.log(`decodeURIComponent: ${decoded}`);
+    
+    const encoded2 = encodeURIComponent(decoded);
+    console.log(`encodeURIComponent after decode: ${encoded2}`);
+    
+    // 构建完整URL
+    const filePath = `_posts/${encoded2}`;
+    console.log(`完整URL: ${filePath}`);
+    
+    return filePath;
+}
+
+// 测试每个文件名
+testFiles.forEach(testUrlHandling);
+
+console.log('\n=== 测试完成 ===');
+
+// 尝试直接加载一个文件进行测试
+async function testFileLoad(filename) {
+    try {
+        console.log(`\n=== 尝试直接加载文件: ${filename} ===`);
+        
+        const filePath = testUrlHandling(filename);
+        
+        const response = await fetch(filePath, {
+            headers: {
+                'Accept': 'text/markdown; charset=utf-8'
+            }
+        });
+        
+        console.log(`HTTP状态: ${response.status} ${response.statusText}`);
+        
+        if (response.ok) {
+            const text = await response.text();
+            console.log(`文件内容长度: ${text.length}`);
+            console.log(`文件内容前200字符: ${text.substring(0, 200)}...`);
+            
+            // 测试Markdown解析
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/plain');
+            console.log(`解析成功，文本节点数量: ${doc.body.childNodes.length}`);
+        } else {
+            console.error('文件加载失败');
+        }
+    } catch (error) {
+        console.error('加载过程中发生错误:', error);
+    }
+}
+
+// 运行测试
+testFileLoad("2025-12-01.md");

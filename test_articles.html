@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .test-result {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-color: #bee5eb;
+            color: #0c5460;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Markdown测试页面</h1>
+    
+    <div id="test-results"></div>
+    
+    <script>
+        // 测试文章列表
+        const articles = [
+            "2025-11-24-3D扫描生成与打印.md",
+            "2025-12-01.md"
+        ];
+        
+        const resultsDiv = document.getElementById('test-results');
+        
+        // 测试单个文章
+        async function testArticle(article) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-result info';
+            resultDiv.innerHTML = `<h3>正在测试: ${article}</h3>`;
+            resultsDiv.appendChild(resultDiv);
+            
+            try {
+                // 构建URL
+                const url = `post.html?file=${encodeURIComponent(article)}`;
+                
+                // 创建iframe来加载页面
+                const iframe = document.createElement('iframe');
+                iframe.style.width = '100%';
+                iframe.style.height = '400px';
+                iframe.style.border = '1px solid #ccc';
+                iframe.style.marginTop = '10px';
+                
+                // 监听iframe加载完成
+                iframe.onload = async function() {
+                    try {
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        
+                        // 检查页面内容
+                        const postContent = iframeDoc.getElementById('post-content');
+                        const postTitle = iframeDoc.getElementById('post-title');
+                        
+                        if (postContent) {
+                            const content = postContent.innerHTML.trim();
+                            const title = postTitle.textContent.trim();
+                            
+                            if (content && content !== '正在加载文章...' && !content.includes('无效的Markdown内容')) {
+                                resultDiv.className = 'test-result success';
+                                resultDiv.innerHTML += `<p>✓ 成功加载</p>`;
+                                resultDiv.innerHTML += `<p>标题: ${title}</p>`;
+                                resultDiv.innerHTML += `<p>内容长度: ${content.length} 字符</p>`;
+                            } else {
+                                resultDiv.className = 'test-result error';
+                                resultDiv.innerHTML += `<p>✗ 内容为空或无效</p>`;
+                                resultDiv.innerHTML += `<p>实际内容: ${content.substring(0, 100)}...</p>`;
+                            }
+                        } else {
+                            resultDiv.className = 'test-result error';
+                            resultDiv.innerHTML += `<p>✗ 页面结构不正确，未找到post-content元素</p>`;
+                        }
+                    } catch (error) {
+                        resultDiv.className = 'test-result error';
+                        resultDiv.innerHTML += `<p>✗ 检查页面内容时出错: ${error.message}</p>`;
+                    }
+                };
+                
+                iframe.onerror = function() {
+                    resultDiv.className = 'test-result error';
+                    resultDiv.innerHTML += `<p>✗ 加载页面时出错</p>`;
+                };
+                
+                // 设置iframe的src
+                iframe.src = url;
+                resultDiv.appendChild(iframe);
+                
+            } catch (error) {
+                resultDiv.className = 'test-result error';
+                resultDiv.innerHTML += `<p>✗ 测试过程中出错: ${error.message}</p>`;
+            }
+        }
+        
+        // 测试所有文章
+        async function testAllArticles() {
+            resultsDiv.innerHTML = '<h2>测试结果</h2>';
+            
+            for (const article of articles) {
+                await testArticle(article);
+            }
+        }
+        
+        // 开始测试
+        testAllArticles();
+    </script>
+</body>
+</html>
