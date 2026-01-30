@@ -4,39 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>所有文章 - 我的博客</title>
-    <style>
-        /* 仅保留最基本的样式 */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            color: #333;
-        }
-        h1, h2, h3 {
-            margin-top: 30px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 15px;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .help {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 12px;
-            color: #666;
-        }
-    </style>
 </head>
 <body>
     <h1>所有文章</h1>
@@ -45,7 +12,7 @@
     <a href="index.html">← 返回首页</a>
     
     <!-- 文章列表 -->
-    <ul id="articles">
+    <ul>
         <li>
             <a href="post.html?file=2025-11-24-3D扫描生成与打印.md">3D扫描、生成与打印</a>
             <span> (2025-11-24)</span>
@@ -75,13 +42,5 @@
             <span> (2025-12-16)</span>
         </li>
     </ul>
-    
-    <!-- 帮助信息 -->
-    <div class="help">
-        快捷键: ? 显示帮助, H 首页, A 文章列表, P 个人介绍, ↑/↓ 导航, Enter 选择, Q 退出
-    </div>
-    
-    <!-- 快捷键脚本 -->
-    <script src="assets/js/keyboard.js"></script>
 </body>
 </html>
