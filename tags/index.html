@@ -1,0 +1,17 @@
+---
+layout: default
+title: 文章标签
+---
+
+<h2>文章标签</h2>
+
+{% assign tags = site.tags | sort %}
+<ul>
+  {% for tag in tags %}
+    <li>
+      <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}/">
+        {{ tag[0] }} ({{ tag[1].size }})
+      </a>
+    </li>
+  {% endfor %}
+</ul>

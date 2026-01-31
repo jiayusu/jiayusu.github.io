@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article>
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+        <span>发布于: {{ page.date | date: '%Y-%m-%d' }}</span>
+        {% if page.categories.size > 0 %}
+        <span>分类: {% for category in page.categories %}<a href="{{ site.baseurl }}/categories/{{ category | slugify }}/">{{ category }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+        {% endif %}
+        {% if page.tags.size > 0 %}
+        <span>标签: {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+        {% endif %}
+    </div>
+    <div class="post-content">
+        {{ content }}
+    </div>
+</article>
+
+<div class="post-navigation">
+    {% if page.previous %}
+    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev-post">
+        <span>&larr; 上一篇</span>
+        <h3>{{ page.previous.title }}</h3>
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a href="{{ site.baseurl }}{{ page.next.url }}" class="next-post">
+        <span>下一篇 &rarr;</span>
+        <h3>{{ page.next.title }}</h3>
+    </a>
+    {% endif %}
+</div>
