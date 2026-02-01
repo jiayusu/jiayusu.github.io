@@ -19,15 +19,15 @@ layout: default
 
 <div class="post-navigation">
     {% if page.previous %}
-    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev-post">
-        <span>&larr; 上一篇</span>
-        <h3>{{ page.previous.title }}</h3>
+    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="post-nav-link prev-post">
+        <span class="nav-direction">&larr; 上一篇</span>
+        <span class="nav-title">{{ page.previous.title }}</span>
     </a>
     {% endif %}
     {% if page.next %}
-    <a href="{{ site.baseurl }}{{ page.next.url }}" class="next-post">
-        <span>下一篇 &rarr;</span>
-        <h3>{{ page.next.title }}</h3>
+    <a href="{{ site.baseurl }}{{ page.next.url }}" class="post-nav-link next-post">
+        <span class="nav-direction">下一篇 &rarr;</span>
+        <span class="nav-title">{{ page.next.title }}</span>
     </a>
     {% endif %}
 </div>
