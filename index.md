@@ -19,17 +19,13 @@ title: 首页
   {% endfor %}
 </ul>
 
-<p><a href="{{ site.baseurl }}/posts/">查看更多文章 →</a></p>
-
 <h2>文章分类</h2>
 
 {% assign categories = site.categories | sort %}
 <ul>
   {% for category in categories %}
     <li>
-      <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">
-        {{ category[0] }} ({{ category[1].size }})
-      </a>
+      {{ category[0] }} ({{ category[1].size }})
     </li>
   {% endfor %}
 </ul>
@@ -43,9 +39,7 @@ title: 首页
   <ul>
     {% for month in posts_by_month %}
       <li>
-        <a href="{{ site.baseurl }}/archives/{{ year.name }}/{{ month.name }}/">
-          {{ year.name }}年{{ month.name }}月 ({{ month.items.size }})
-        </a>
+        {{ year.name }}年{{ month.name }}月 ({{ month.items.size }})
       </li>
     {% endfor %}
   </ul>
