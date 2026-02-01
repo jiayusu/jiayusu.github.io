@@ -12,7 +12,8 @@
  markdown: kramdown
  theme: minima
  plugins:
-   - jekyll-feed
+  - jekyll-feed
+  - jekyll-paginate
 
 # 分页设置
 paginate: 5
