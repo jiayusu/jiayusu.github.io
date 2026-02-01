@@ -87,10 +87,12 @@
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
         }
         .post-nav-link {
-            display: block;
-            margin-bottom: 15px;
+            flex: 1;
             padding: 10px;
             text-decoration: none;
             color: #333;
@@ -114,6 +116,10 @@
         }
         .next-post {
             text-align: right;
+        }
+        .next-post .nav-direction {
+            margin-right: 0;
+            margin-left: 10px;
         }
     </style>
 </head>
