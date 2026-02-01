@@ -19,29 +19,5 @@ title: 首页
   {% endfor %}
 </ul>
 
-<h2>文章分类</h2>
 
-{% assign categories = site.categories | sort %}
-<ul>
-  {% for category in categories %}
-    <li>
-      {{ category[0] }} ({{ category[1].size }})
-    </li>
-  {% endfor %}
-</ul>
-
-<h2>文章归档</h2>
-
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-{% for year in posts_by_year %}
-  <h3>{{ year.name }}</h3>
-  {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%m'" %}
-  <ul>
-    {% for month in posts_by_month %}
-      <li>
-        {{ year.name }}年{{ month.name }}月 ({{ month.items.size }})
-      </li>
-    {% endfor %}
-  </ul>
-{% endfor %}
 
