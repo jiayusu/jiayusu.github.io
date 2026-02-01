@@ -3,8 +3,6 @@ layout: default
 title: 首页
 ---
 
-<h2>最新文章</h2>
-
 <ul class="post-list">
   {% for post in site.posts limit:5 %}
     <li>
