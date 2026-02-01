@@ -4,54 +4,16 @@ title: 首页
 ---
 
 <ul class="post-list">
-  {% if paginator.posts.size > 0 %}
-    {% for post in paginator.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      <div class="post-meta">
-        {{ post.date | date: '%Y-%m-%d' }}
-      </div>
-    </li>
-    {% endfor %}
-  {% else %}
-    {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      <div class="post-meta">
-        {{ post.date | date: '%Y-%m-%d' }}
-      </div>
-    </li>
-    {% endfor %}
-  {% endif %}
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    <div class="post-meta">
+      {{ post.date | date: '%Y-%m-%d' }}
+    </div>
+  </li>
+  {% endfor %}
 </ul>
 
 {% if site.posts.size == 0 %}
 <p>暂无文章</p>
-{% endif %}
-
-<!-- 分页导航 -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&larr; 上一页</a>
-  {% else %}
-    <span>&larr; 上一页</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span>{{ page }}</span>
-    {% elsif page == 1 %}
-      <a href="{{ '/' | prepend: site.baseurl }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.baseurl }}/page{{ page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">下一页 &rarr;</a>
-  {% else %}
-    <span>下一页 &rarr;</span>
-  {% endif %}
-</div>
 {% endif %}
