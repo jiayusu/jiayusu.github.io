@@ -4,17 +4,28 @@ title: 首页
 ---
 
 <ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    <div class="post-meta">
-      {{ post.date | date: '%Y-%m-%d' }}
-    </div>
-  </li>
-  {% endfor %}
+  {% if paginator.posts.size > 0 %}
+    {% for post in paginator.posts %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <div class="post-meta">
+        {{ post.date | date: '%Y-%m-%d' }}
+      </div>
+    </li>
+    {% endfor %}
+  {% else %}
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <div class="post-meta">
+        {{ post.date | date: '%Y-%m-%d' }}
+      </div>
+    </li>
+    {% endfor %}
+  {% endif %}
 </ul>
 
-{% if paginator.posts.size == 0 %}
+{% if site.posts.size == 0 %}
 <p>暂无文章</p>
 {% endif %}
 
