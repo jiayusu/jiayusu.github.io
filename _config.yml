@@ -11,6 +11,8 @@ theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 author:
   name: "Su Jiayu"
