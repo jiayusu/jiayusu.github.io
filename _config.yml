@@ -1,30 +1,24 @@
-# 博客配置
+title: Su Jiayu
+email: bbbbbbbb@bupt.edu.cn
+description: >
+  Notes on AI, design, coding and things I am learning.
 
-# 站点设置
- title: 我的博客
- email: your-email@example.com
- description: >- # this means to ignore newlines until "baseurl:"  
-   个人技术博客，记录学习心得和技术分享
- baseurl: "" # the subpath of your site, e.g. /blog
- url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://jiayusu.github.io"
 
-# 构建设置
- markdown: kramdown
- theme: minima
- plugins:
+markdown: kramdown
+theme: minima
+
+plugins:
   - jekyll-feed
 
+author:
+  name: "Su Jiayu"
+  avatar: ""
+  bio: "Undergraduate student at BUPT, exploring AI, coding and interaction design."
 
-
-# 自定义设置
- author:
-   name: "作者"
-   avatar: ""
-   bio: "技术爱好者，专注于人工智能、机器学习和产品设计领域"
-
-# 社交链接
- social_links:
-   github: jiayusu
-   twitter: 
-   linkedin: 
-   instagram: 
+social_links:
+  github: jiayusu
+  twitter:
+  linkedin:
+  instagram:
