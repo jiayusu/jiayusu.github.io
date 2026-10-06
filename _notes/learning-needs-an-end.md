@@ -1,6 +1,5 @@
 ---
 title: "学习需要预先设置终点"
-topic: "学习与研究"
 summary: "明确停止条件能防止疲劳吞掉巩固时间。"
 ---
 
@@ -11,4 +10,3 @@ summary: "明确停止条件能防止疲劳吞掉巩固时间。"
 
 - [外部记忆让工作能够从断点恢复]({% link _notes/external-memory-enables-resumption.md %})
 - [训练只有配合复盘才会积累]({% link _notes/practice-needs-review.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

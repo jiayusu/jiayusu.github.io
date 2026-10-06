@@ -1,6 +1,5 @@
 ---
 title: "经典认知科学把心智理解为信息处理"
-topic: "交互与认知"
 summary: "感知是输入，符号运算是处理，行动是输出。"
 ---
 
@@ -13,4 +12,3 @@ summary: "感知是输入，符号运算是处理，行动是输出。"
 
 - [具身认知把身体、行动与环境放回认知系统]({% link _notes/embodied-cognition-body-action-environment.md %})
 - [智能交互不只是感知、理解和响应三个模块]({% link _notes/intelligent-interaction-is-a-loop.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

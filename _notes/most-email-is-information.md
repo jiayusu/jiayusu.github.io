@@ -1,6 +1,5 @@
 ---
 title: "多数邮件是信息，不是对话"
-topic: "产品与系统"
 summary: "信息抵达不应该自动制造回复和跟踪义务。"
 ---
 
@@ -11,4 +10,3 @@ summary: "信息抵达不应该自动制造回复和跟踪义务。"
 
 - [电子邮件的默认权力偏向发送者]({% link _notes/email-favors-sender.md %})
 - [稍后阅读往往意味着永不阅读]({% link _notes/read-it-later-is-read-it-never.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

@@ -1,6 +1,5 @@
 ---
 title: "闲聊是一种低成本的社会关系维护"
-topic: "生活与自我"
 summary: "语言让人同时交换关系信息、声誉和可信度线索。"
 ---
 
@@ -13,4 +12,3 @@ summary: "语言让人同时交换关系信息、声誉和可信度线索。"
 
 - [社群依靠共同精神与持续互动存在]({% link _notes/community-needs-shared-spirit.md %})
 - [公开构建把思考变成可追溯的外部对象]({% link _notes/build-in-public-externalizes-thinking.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

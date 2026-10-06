@@ -1,6 +1,5 @@
 ---
 title: "优秀产品是在反复修改中形成的"
-topic: "产品与系统"
 summary: "真实使用暴露的问题比想象中的完整方案更可靠。"
 ---
 
@@ -11,4 +10,3 @@ summary: "真实使用暴露的问题比想象中的完整方案更可靠。"
 
 - [小资源环境更能暴露真正的优先级]({% link _notes/small-resources-reveal-priorities.md %})
 - [建造系统与使用系统需要不同的思维]({% link _notes/building-and-using-systems-differ.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

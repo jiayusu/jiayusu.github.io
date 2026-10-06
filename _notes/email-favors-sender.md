@@ -1,6 +1,5 @@
 ---
 title: "电子邮件的默认权力偏向发送者"
-topic: "产品与系统"
 summary: "知道地址的人可以把处理成本直接放进你的收件箱。"
 ---
 
@@ -11,4 +10,3 @@ summary: "知道地址的人可以把处理成本直接放进你的收件箱。"
 
 - [多数邮件是信息，不是对话]({% link _notes/most-email-is-information.md %})
 - [稍后阅读往往意味着永不阅读]({% link _notes/read-it-later-is-read-it-never.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

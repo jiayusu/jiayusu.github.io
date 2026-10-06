@@ -1,6 +1,5 @@
 ---
 title: "热爱与相信共同支撑长期投入"
-topic: "生活与自我"
 summary: "不觉得持续痛苦与相信长期价值，缺一都会动摇。"
 ---
 
@@ -11,4 +10,3 @@ summary: "不觉得持续痛苦与相信长期价值，缺一都会动摇。"
 
 - [长期做事首先需要把时间尺度拉长]({% link _notes/long-term-work-needs-calm.md %})
 - [时间才是最需要配置的投资本金]({% link _notes/time-is-the-real-investment.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

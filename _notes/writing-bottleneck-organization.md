@@ -1,6 +1,5 @@
 ---
 title: "写作的瓶颈通常是组织而不是句子"
-topic: "学习与研究"
 summary: "材料的层级和关系不清，润色无法补救。"
 ---
 
@@ -13,4 +12,3 @@ summary: "材料的层级和关系不清，润色无法补救。"
 
 - [分类让碎片显露出研究结构]({% link _notes/classification-creates-structure.md %})
 - [知识块只有连接语境才容易迁移]({% link _notes/context-gives-chunks-meaning.md %})
-- 来源：[读田渊栋五年总结]({% post_url 2025-12-07-读田渊栋五年总结 %})

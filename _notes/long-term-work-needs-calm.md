@@ -1,6 +1,5 @@
 ---
 title: "长期做事首先需要把时间尺度拉长"
-topic: "生活与自我"
 summary: "心静来自长期打算，而不是短期没有波动。"
 ---
 
@@ -11,4 +10,3 @@ summary: "心静来自长期打算，而不是短期没有波动。"
 
 - [训练只有配合复盘才会积累]({% link _notes/practice-needs-review.md %})
 - [热爱与相信共同支撑长期投入]({% link _notes/love-and-belief-sustain-work.md %})
-- 来源：[读田渊栋五年总结]({% post_url 2025-12-07-读田渊栋五年总结 %})

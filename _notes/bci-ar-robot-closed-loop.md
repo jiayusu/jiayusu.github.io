@@ -1,6 +1,5 @@
 ---
 title: "脑机接口只有形成闭环才成为交互系统"
-topic: "交互与认知"
 summary: "意图识别、反馈和物理行动必须彼此校正。"
 ---
 
@@ -13,4 +12,3 @@ EEG 只能给出带噪声的意图线索。若系统只把分类结果直接变�
 
 - [方向一致的反馈比单纯高亮更能稳定意图]({% link _notes/directional-feedback-stabilizes-bci.md %})
 - [容错机制让显式控制逐渐变成隐性学习]({% link _notes/implicit-learning-needs-error-tolerance.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

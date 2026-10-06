@@ -1,6 +1,5 @@
 ---
 title: "恢复基本秩序是重新获得主动性的第一步"
-topic: "生活与自我"
 summary: "吃饭、睡眠、清洁与整理会直接改变可用精力。"
 ---
 
@@ -11,4 +10,3 @@ summary: "吃饭、睡眠、清洁与整理会直接改变可用精力。"
 
 - [改变环境通常比对抗习惯可靠]({% link _notes/design-environment-not-willpower.md %})
 - [人生审计把模糊不满变成可检查的问题]({% link _notes/life-audit-is-structured-reflection.md %})
-- 来源：[2026-09-30 DSH]({% post_url 2026-09-30-DSH %})、[2026-10-01 New]({% post_url 2026-10-01-New %})

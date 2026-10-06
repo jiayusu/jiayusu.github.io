@@ -1,6 +1,5 @@
 ---
 title: "读论文先回答创新、局限和批评"
-topic: "学习与研究"
 summary: "三个问题比从头到尾被动阅读更容易留下可用信息。"
 ---
 
@@ -13,4 +12,3 @@ summary: "三个问题比从头到尾被动阅读更容易留下可用信息。"
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [未来方向应该从已有工作的边界生长]({% link _notes/research-gaps-grow-from-boundaries.md %})
-- 来源：[智能网联汽车研究与写作记录]({% post_url 2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点 %})

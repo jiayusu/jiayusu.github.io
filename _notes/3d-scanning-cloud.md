@@ -1,6 +1,5 @@
 ---
 title: "云端 GPU 让手机摄影测量成为可用的扫描工具"
-topic: "创作与工具"
 summary: "手机负责采集，云端把原本数小时的重建压缩到可接受时间。"
 ---
 
@@ -13,4 +12,3 @@ summary: "手机负责采集，云端把原本数小时的重建压缩到可接�
 
 - [创作工具的门槛会被多条技术曲线共同压低]({% link _notes/3d-creation-thresholds-fall-together.md %})
 - [建造系统与使用系统需要不同的思维]({% link _notes/building-and-using-systems-differ.md %})
-- 来源：[3D 扫描、生成与打印]({% post_url 2025-11-24-3D扫描生成与打印 %})

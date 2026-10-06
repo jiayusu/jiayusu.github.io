@@ -1,6 +1,5 @@
 ---
 title: "领域通用语言让系统上下游对齐"
-topic: "产品与系统"
 summary: "业务、界面与代码对同一概念使用同一组词。"
 ---
 
@@ -11,4 +10,3 @@ summary: "业务、界面与代码对同一概念使用同一组词。"
 
 - [数据库模型应该先于界面细节]({% link _notes/database-model-before-interface.md %})
 - [知识块只有连接语境才容易迁移]({% link _notes/context-gives-chunks-meaning.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

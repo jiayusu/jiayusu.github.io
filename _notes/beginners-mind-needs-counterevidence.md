@@ -1,6 +1,5 @@
 ---
 title: "初学者心态需要主动寻找反证"
-topic: "学习与研究"
 summary: "开放并不是不知道，而是让已有解释继续接受挑战。"
 ---
 
@@ -11,4 +10,3 @@ summary: "开放并不是不知道，而是让已有解释继续接受挑战。"
 
 - [读论文先回答创新、局限和批评]({% link _notes/read-paper-three-questions.md %})
 - [经验只能排除一些必死选项]({% link _notes/experience-only-removes-dead-ends.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

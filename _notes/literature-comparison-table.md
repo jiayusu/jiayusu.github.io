@@ -1,6 +1,5 @@
 ---
 title: "文献笔记应该直接进入比较表"
-topic: "学习与研究"
 summary: "固定维度能让零散论文变成可比较的证据。"
 ---
 
@@ -13,4 +12,3 @@ summary: "固定维度能让零散论文变成可比较的证据。"
 
 - [读论文先回答创新、局限和批评]({% link _notes/read-paper-three-questions.md %})
 - [分类让碎片显露出研究结构]({% link _notes/classification-creates-structure.md %})
-- 来源：[智能网联汽车研究与写作记录]({% post_url 2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点 %})

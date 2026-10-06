@@ -1,6 +1,5 @@
 ---
 title: "创作工具的门槛会被多条技术曲线共同压低"
-topic: "创作与工具"
 summary: "算法、硬件、云计算和专利变化需要同时成熟。"
 ---
 
@@ -11,4 +10,3 @@ summary: "算法、硬件、云计算和专利变化需要同时成熟。"
 
 - [云端 GPU 让手机摄影测量成为可用的扫描工具]({% link _notes/3d-scanning-cloud.md %})
 - [生成式媒体产品的关键是约束处理管线]({% link _notes/generative-media-needs-pipeline-constraints.md %})
-- 来源：[3D 扫描、生成与打印]({% post_url 2025-11-24-3D扫描生成与打印 %})

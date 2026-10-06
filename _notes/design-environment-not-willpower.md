@@ -1,6 +1,5 @@
 ---
 title: "改变环境通常比对抗习惯可靠"
-topic: "生活与自我"
 summary: "让坏选择更难、好选择更顺手。"
 ---
 
@@ -11,4 +10,3 @@ summary: "让坏选择更难、好选择更顺手。"
 
 - [恢复基本秩序是重新获得主动性的第一步]({% link _notes/routine-restores-agency.md %})
 - [学习需要预先设置终点]({% link _notes/learning-needs-an-end.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

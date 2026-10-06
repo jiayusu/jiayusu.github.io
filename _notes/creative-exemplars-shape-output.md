@@ -1,6 +1,5 @@
 ---
 title: "创作标杆会改变我们能看见的可能性"
-topic: "创作与工具"
 summary: "与高水平作品持续碰撞，才能逐渐形成自己的判断。"
 ---
 
@@ -11,4 +10,3 @@ summary: "与高水平作品持续碰撞，才能逐渐形成自己的判断。"
 
 - [人通过创造出来的东西认识自己]({% link _notes/creation-reveals-the-self.md %})
 - [生成式媒体产品的关键是约束处理管线]({% link _notes/generative-media-needs-pipeline-constraints.md %})
-- 来源：[2026-09-30 DSH]({% post_url 2026-09-30-DSH %})、[2026-10-03 M]({% post_url 2026-10-03-M %})

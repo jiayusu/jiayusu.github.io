@@ -1,6 +1,5 @@
 ---
 title: "数据库模型应该先于界面细节"
-topic: "产品与系统"
 summary: "先定义业务对象及关系，再决定它们如何被展示。"
 ---
 
@@ -11,4 +10,3 @@ summary: "先定义业务对象及关系，再决定它们如何被展示。"
 
 - [领域通用语言让系统上下游对齐]({% link _notes/domain-language-aligns-systems.md %})
 - [建造系统与使用系统需要不同的思维]({% link _notes/building-and-using-systems-differ.md %})
-- 来源：[2026-10-02 F]({% post_url 2026-10-02-F %})、[2026-10-05 摘录]({% post_url 2026-10-05-X %})

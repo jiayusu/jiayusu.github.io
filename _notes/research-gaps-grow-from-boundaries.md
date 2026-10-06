@@ -1,6 +1,5 @@
 ---
 title: "未来方向应该从已有工作的边界生长"
-topic: "学习与研究"
 summary: "研究空白来自证据覆盖不到的地方，而不是凭空想象。"
 ---
 
@@ -11,4 +10,3 @@ summary: "研究空白来自证据覆盖不到的地方，而不是凭空想象�
 
 - [读论文先回答创新、局限和批评]({% link _notes/read-paper-three-questions.md %})
 - [经验只能排除一些必死选项]({% link _notes/experience-only-removes-dead-ends.md %})
-- 来源：[智能网联汽车研究与写作记录]({% post_url 2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点 %})

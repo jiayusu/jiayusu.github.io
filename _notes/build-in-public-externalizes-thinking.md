@@ -1,6 +1,5 @@
 ---
 title: "公开构建把思考变成可追溯的外部对象"
-topic: "创作与工具"
 summary: "记录产品判断和构建过程，比只展示成品更有复利。"
 ---
 
@@ -11,4 +10,3 @@ Build in public 的价值不只是宣传。持续记录看过什么、怎样判�
 
 - [外部记忆让工作能够从断点恢复]({% link _notes/external-memory-enables-resumption.md %})
 - [人通过创造出来的东西认识自己]({% link _notes/creation-reveals-the-self.md %})
-- 来源：[2026-09-30 DSH]({% post_url 2026-09-30-DSH %})

@@ -1,6 +1,5 @@
 ---
 title: "具身认知把身体、行动与环境放回认知系统"
-topic: "交互与认知"
 summary: "认知并不只发生在大脑内部。"
 ---
 
@@ -13,4 +12,3 @@ summary: "认知并不只发生在大脑内部。"
 
 - [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})
 - [零接触并不自动等于自然交互]({% link _notes/zero-touch-is-not-natural.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

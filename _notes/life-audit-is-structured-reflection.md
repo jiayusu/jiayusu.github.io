@@ -1,6 +1,5 @@
 ---
 title: "人生审计把模糊不满变成可检查的问题"
-topic: "生活与自我"
 summary: "头脑风暴也可以用来检查关系、成长与资源分配。"
 ---
 
@@ -11,4 +10,3 @@ summary: "头脑风暴也可以用来检查关系、成长与资源分配。"
 
 - [时间才是最需要配置的投资本金]({% link _notes/time-is-the-real-investment.md %})
 - [恢复基本秩序是重新获得主动性的第一步]({% link _notes/routine-restores-agency.md %})
-- 来源：[2026-01-28 日记]({% post_url 2026-01-28-日记 %})

@@ -5,35 +5,15 @@ title: Su Jiayu 的工作笔记
 
 <article class="note note--index">
   <div class="note-content">
-    {% assign topics = '交互与认知|学习与研究|产品与系统|创作与工具|生活与自我' | split: '|' %}
-    {% for topic in topics %}
-      {% assign topic_notes = site.notes | where: 'topic', topic | sort: 'title' %}
-      {% if topic_notes.size > 0 %}
-      <section class="topic-group">
-        <h2>{{ topic }}</h2>
-        <ul class="concept-index">
-          {% for note in topic_notes %}
-          <li>
-            <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
-            {% if note.summary %}<span>{{ note.summary }}</span>{% endif %}
-          </li>
-          {% endfor %}
-        </ul>
-      </section>
-      {% endif %}
-    {% endfor %}
-
-    <section class="source-index">
-      <h2>来源记录</h2>
-      <ul class="note-index"ii>
-        {% for post in site.posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
+    {% assign concept_notes = site.notes | sort: 'title' %}
+    <ul class="concept-index">
+      {% for note in concept_notes %}
+      <li>
+        <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+        {% if note.summary %}<span>{{ note.summary }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
 
   </div>
 </article>

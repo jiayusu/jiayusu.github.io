@@ -1,6 +1,5 @@
 ---
 title: "稍后阅读往往意味着永不阅读"
-topic: "生活与自我"
 summary: "保存缓解了错过焦虑，却没有为阅读分配时间。"
 ---
 
@@ -11,4 +10,3 @@ summary: "保存缓解了错过焦虑，却没有为阅读分配时间。"
 
 - [时间才是最需要配置的投资本金]({% link _notes/time-is-the-real-investment.md %})
 - [渐进式总结把高风险决策推迟到信息更充分时]({% link _notes/progressive-summarization-delays-risk.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

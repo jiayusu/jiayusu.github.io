@@ -1,6 +1,5 @@
 ---
 title: "生成式媒体产品的关键是约束处理管线"
-topic: "产品与系统"
 summary: "价值不只来自生成，而来自降低随机性和控制成本。"
 ---
 
@@ -11,4 +10,3 @@ summary: "价值不只来自生成，而来自降低随机性和控制成本。"
 
 - [小资源环境更能暴露真正的优先级]({% link _notes/small-resources-reveal-priorities.md %})
 - [创作工具的门槛会被多条技术曲线共同压低]({% link _notes/3d-creation-thresholds-fall-together.md %})
-- 来源：[2026-10-03 M]({% post_url 2026-10-03-M %})

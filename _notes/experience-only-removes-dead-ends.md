@@ -1,6 +1,5 @@
 ---
 title: "经验只能排除一些必死选项"
-topic: "学习与研究"
 summary: "过去能提供边界，却不能替未来做决定。"
 ---
 
@@ -11,4 +10,3 @@ summary: "过去能提供边界，却不能替未来做决定。"
 
 - [未来方向应该从已有工作的边界生长]({% link _notes/research-gaps-grow-from-boundaries.md %})
 - [初学者心态需要主动寻找反证]({% link _notes/beginners-mind-needs-counterevidence.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

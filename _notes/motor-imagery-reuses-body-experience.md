@@ -1,6 +1,5 @@
 ---
 title: "运动想象会重新调用身体经验"
-topic: "交互与认知"
 summary: "没有实际动作，不代表身体完全退出了认知。"
 ---
 
@@ -13,4 +12,3 @@ summary: "没有实际动作，不代表身体完全退出了认知。"
 
 - [零接触并不自动等于自然交互]({% link _notes/zero-touch-is-not-natural.md %})
 - [低认知负荷反馈应该分散到多种感官]({% link _notes/low-load-feedback-needs-multimodality.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

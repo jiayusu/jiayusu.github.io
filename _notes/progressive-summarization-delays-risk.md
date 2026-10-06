@@ -1,6 +1,5 @@
 ---
 title: "渐进式总结把高风险决策推迟到信息更充分时"
-topic: "学习与研究"
 summary: "先做低成本准备，再在需要时压缩和行动。"
 ---
 
@@ -11,4 +10,3 @@ summary: "先做低成本准备，再在需要时压缩和行动。"
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [时间才是最需要配置的投资本金]({% link _notes/time-is-the-real-investment.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

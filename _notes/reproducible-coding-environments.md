@@ -1,6 +1,5 @@
 ---
 title: "可复现的编程环境需要明确版本与恢复路径"
-topic: "创作与工具"
 summary: "能够还原环境，比记住曾经怎么配置更可靠。"
 ---
 
@@ -11,4 +10,3 @@ summary: "能够还原环境，比记住曾经怎么配置更可靠。"
 
 - [VS Code 与终端必须使用同一个 Python 解释器]({% link _notes/vscode-interpreter-match.md %})
 - [工具箱应该从命令行基础开始]({% link _notes/toolbox-starts-with-shell.md %})
-- 来源：[2026-10-01 New]({% post_url 2026-10-01-New %})

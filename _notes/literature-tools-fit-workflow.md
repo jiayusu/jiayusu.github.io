@@ -1,6 +1,5 @@
 ---
 title: "文献工具应该匹配工作流而不是功能数量"
-topic: "学习与研究"
 summary: "抓取、标注、协作和投稿对工具的要求不同。"
 ---
 
@@ -11,4 +10,3 @@ summary: "抓取、标注、协作和投稿对工具的要求不同。"
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [外部记忆让工作能够从断点恢复]({% link _notes/external-memory-enables-resumption.md %})
-- 来源：[智能网联汽车研究与写作记录]({% post_url 2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点 %})

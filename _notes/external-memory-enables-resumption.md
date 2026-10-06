@@ -1,6 +1,5 @@
 ---
 title: "外部记忆让工作能够从断点恢复"
-topic: "学习与研究"
 summary: "记录下一步比记录完成感更能帮助未来的自己。"
 ---
 
@@ -11,4 +10,3 @@ summary: "记录下一步比记录完成感更能帮助未来的自己。"
 
 - [公开构建把思考变成可追溯的外部对象]({% link _notes/build-in-public-externalizes-thinking.md %})
 - [学习需要预先设置终点]({% link _notes/learning-needs-an-end.md %})
-- 来源：[读田渊栋五年总结]({% post_url 2025-12-07-读田渊栋五年总结 %})

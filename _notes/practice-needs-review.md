@@ -1,6 +1,5 @@
 ---
 title: "训练只有配合复盘才会积累"
-topic: "学习与研究"
 summary: "数量提供样本，复盘把样本变成方法。"
 ---
 
@@ -11,4 +10,3 @@ summary: "数量提供样本，复盘把样本变成方法。"
 
 - [长期做事首先需要把时间尺度拉长]({% link _notes/long-term-work-needs-calm.md %})
 - [学习需要预先设置终点]({% link _notes/learning-needs-an-end.md %})
-- 来源：[读田渊栋五年总结]({% post_url 2025-12-07-读田渊栋五年总结 %})

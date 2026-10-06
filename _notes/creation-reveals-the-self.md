@@ -1,6 +1,5 @@
 ---
 title: "人通过创造出来的东西认识自己"
-topic: "生活与自我"
 summary: "自我不是等待发现的内核，而是在行动和作品中形成。"
 ---
 
@@ -11,4 +10,3 @@ summary: "自我不是等待发现的内核，而是在行动和作品中形成�
 
 - [创作标杆会改变我们能看见的可能性]({% link _notes/creative-exemplars-shape-output.md %})
 - [公开构建把思考变成可追溯的外部对象]({% link _notes/build-in-public-externalizes-thinking.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

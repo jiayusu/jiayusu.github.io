@@ -1,6 +1,5 @@
 ---
 title: "零接触并不自动等于自然交互"
-topic: "交互与认知"
 summary: "减少身体动作可能把负担转移到持续注意和刻意思维上。"
 ---
 
@@ -11,4 +10,3 @@ summary: "减少身体动作可能把负担转移到持续注意和刻意思维�
 
 - [运动想象会重新调用身体经验]({% link _notes/motor-imagery-reuses-body-experience.md %})
 - [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

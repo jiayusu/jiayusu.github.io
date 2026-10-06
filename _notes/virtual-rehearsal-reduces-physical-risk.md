@@ -1,6 +1,5 @@
 ---
 title: "虚拟预演能降低物理行动的试错成本"
-topic: "交互与认知"
 summary: "先在可撤销空间确认意图，再驱动真实设备。"
 ---
 
@@ -13,4 +12,3 @@ summary: "先在可撤销空间确认意图，再驱动真实设备。"
 
 - [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})
 - [容错机制让显式控制逐渐变成隐性学习]({% link _notes/implicit-learning-needs-error-tolerance.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

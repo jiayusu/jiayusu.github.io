@@ -1,6 +1,5 @@
 ---
 title: "智能交互不只是感知、理解和响应三个模块"
-topic: "交互与认知"
 summary: "三个模块只有进入相互校正的循环才产生智能交互。"
 ---
 
@@ -13,4 +12,3 @@ summary: "三个模块只有进入相互校正的循环才产生智能交互。"
 
 - [脑机接口只有形成闭环才成为交互系统]({% link _notes/bci-ar-robot-closed-loop.md %})
 - [经典认知科学把心智理解为信息处理]({% link _notes/classical-cognition-information-processing.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

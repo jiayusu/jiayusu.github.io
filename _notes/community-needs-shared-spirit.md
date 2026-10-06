@@ -1,6 +1,5 @@
 ---
 title: "社群依靠共同精神与持续互动存在"
-topic: "生活与自我"
 summary: "人数和平台并不能自动产生共同体。"
 ---
 
@@ -11,4 +10,3 @@ summary: "人数和平台并不能自动产生共同体。"
 
 - [闲聊是一种低成本的社会关系维护]({% link _notes/conversation-maintains-social-bonds.md %})
 - [热爱与相信共同支撑长期投入]({% link _notes/love-and-belief-sustain-work.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

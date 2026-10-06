@@ -1,6 +1,5 @@
 ---
 title: "方向一致的反馈比单纯高亮更能稳定意图"
-topic: "交互与认知"
 summary: "反馈应与用户正在形成的动作表征保持一致。"
 ---
 
@@ -13,4 +12,3 @@ summary: "反馈应与用户正在形成的动作表征保持一致。"
 
 - [脑机接口只有形成闭环才成为交互系统]({% link _notes/bci-ar-robot-closed-loop.md %})
 - [低认知负荷反馈应该分散到多种感官]({% link _notes/low-load-feedback-needs-multimodality.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

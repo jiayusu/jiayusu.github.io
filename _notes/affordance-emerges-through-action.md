@@ -1,6 +1,5 @@
 ---
 title: "可供性是在行动中被感知的"
-topic: "交互与认知"
 summary: "人看到的不是物体属性，而是行动可能性。"
 ---
 
@@ -13,4 +12,3 @@ summary: "人看到的不是物体属性，而是行动可能性。"
 
 - [具身认知把身体、行动与环境放回认知系统]({% link _notes/embodied-cognition-body-action-environment.md %})
 - [虚拟预演能降低物理行动的试错成本]({% link _notes/virtual-rehearsal-reduces-physical-risk.md %})
-- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

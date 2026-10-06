@@ -1,6 +1,5 @@
 ---
 title: "时间才是最需要配置的投资本金"
-topic: "生活与自我"
 summary: "把可控时间放在哪里，就是在增加什么的未来概率。"
 ---
 
@@ -11,4 +10,3 @@ summary: "把可控时间放在哪里，就是在增加什么的未来概率。"
 
 - [人生审计把模糊不满变成可检查的问题]({% link _notes/life-audit-is-structured-reflection.md %})
 - [热爱与相信共同支撑长期投入]({% link _notes/love-and-belief-sustain-work.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

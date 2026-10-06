@@ -1,6 +1,5 @@
 ---
 title: "建造系统与使用系统需要不同的思维"
-topic: "产品与系统"
 summary: "实现者关心结构，使用者关心能否完成当前任务。"
 ---
 
@@ -13,4 +12,3 @@ summary: "实现者关心结构，使用者关心能否完成当前任务。"
 
 - [优秀产品是在反复修改中形成的]({% link _notes/products-emerge-through-iteration.md %})
 - [数据库模型应该先于界面细节]({% link _notes/database-model-before-interface.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})

@@ -1,6 +1,5 @@
 ---
 title: "分类让碎片显露出研究结构"
-topic: "学习与研究"
 summary: "先按主题和流派排列，论述框架才会浮现。"
 ---
 
@@ -13,4 +12,3 @@ summary: "先按主题和流派排列，论述框架才会浮现。"
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [写作的瓶颈通常是组织而不是句子]({% link _notes/writing-bottleneck-organization.md %})
-- 来源：[智能网联汽车研究与写作记录]({% post_url 2025-11-30-智能网联汽车在智慧城市部署的技术、架构与治理要点 %})

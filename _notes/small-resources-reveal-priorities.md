@@ -1,6 +1,5 @@
 ---
 title: "小资源环境更能暴露真正的优先级"
-topic: "产品与系统"
 summary: "资源不足时仍能推进，说明抓住了需求的关键部分。"
 ---
 
@@ -11,4 +10,3 @@ summary: "资源不足时仍能推进，说明抓住了需求的关键部分。"
 
 - [优秀产品是在反复修改中形成的]({% link _notes/products-emerge-through-iteration.md %})
 - [生成式媒体产品的关键是约束处理管线]({% link _notes/generative-media-needs-pipeline-constraints.md %})
-- 来源：[2026-10-06 G]({% post_url 2026-10-06-G %})

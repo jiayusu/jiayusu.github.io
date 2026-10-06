@@ -1,6 +1,5 @@
 ---
 title: "知识块只有连接语境才容易迁移"
-topic: "学习与研究"
 summary: "记住答案不等于知道它在什么问题中有用。"
 ---
 
@@ -11,4 +10,3 @@ summary: "记住答案不等于知道它在什么问题中有用。"
 
 - [分类让碎片显露出研究结构]({% link _notes/classification-creates-structure.md %})
 - [领域通用语言让系统上下游对齐]({% link _notes/domain-language-aligns-systems.md %})
-- 来源：[2026-10-05 摘录]({% post_url 2026-10-05-X %})
