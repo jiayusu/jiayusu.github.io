@@ -8,7 +8,6 @@ summary: "把可控时间放在哪里，就是在增加什么的未来概率。"
 
 判断一项活动时，可以区分即时消费与延迟收益，但也不能把所有休息视为浪费。关键是资源配置是否符合长期意图，而不是每一分钟看起来都在生产。
 
-## 连接
 
 - [人生审计把模糊不满变成可检查的问题]({% link _notes/life-audit-is-structured-reflection.md %})
 - [热爱与相信共同支撑长期投入]({% link _notes/love-and-belief-sustain-work.md %})

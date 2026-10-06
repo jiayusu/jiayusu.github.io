@@ -10,7 +10,6 @@ summary: "人看到的不是物体属性，而是行动可能性。"
 
 交互设计因此应允许试探、预演和撤销，而不只是要求用户一次给出正确命令。
 
-## 连接
 
 - [具身认知把身体、行动与环境放回认知系统]({% link _notes/embodied-cognition-body-action-environment.md %})
 - [虚拟预演能降低物理行动的试错成本]({% link _notes/virtual-rehearsal-reduces-physical-risk.md %})

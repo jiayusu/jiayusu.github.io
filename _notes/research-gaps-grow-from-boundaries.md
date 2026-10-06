@@ -8,7 +8,6 @@ summary: "研究空白来自证据覆盖不到的地方，而不是凭空想象�
 
 多个工作反复暴露同一限制时，它就可能成为值得研究的问题。未来方向因此是从通信瓶颈、计算限制和数据约束中推导出来的，而不是在结尾追加愿望清单。
 
-## 连接
 
 - [读论文先回答创新、局限和批评]({% link _notes/read-paper-three-questions.md %})
 - [经验只能排除一些必死选项]({% link _notes/experience-only-removes-dead-ends.md %})

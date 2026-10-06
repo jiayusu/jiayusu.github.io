@@ -10,7 +10,6 @@ summary: "实现者关心结构，使用者关心能否完成当前任务。"
 
 设计评审应刻意在两种视角之间切换，而不是默认建造者的理解就是用户的理解。
 
-## 连接
 
 - [优秀产品是在反复修改中形成的]({% link _notes/products-emerge-through-iteration.md %})
 - [数据库模型应该先于界面细节]({% link _notes/database-model-before-interface.md %})

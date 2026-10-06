@@ -8,7 +8,6 @@ summary: "先定义业务对象及关系，再决定它们如何被展示。"
 
 这不意味着先做庞大架构，而是先回答：系统里真正存在什么，它们如何变化，哪些规则不能被破坏。页面是这些模型面向具体任务的一种投影。
 
-## 连接
 
 - [领域通用语言让系统上下游对齐]({% link _notes/domain-language-aligns-systems.md %})
 - [建造系统与使用系统需要不同的思维]({% link _notes/building-and-using-systems-differ.md %})

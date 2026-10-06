@@ -10,7 +10,6 @@ EEG 只能给出带噪声的意图线索。若系统只把分类结果直接变�
 
 这意味着交互质量不能只看单次分类准确率，还要看反馈延迟、纠错机会以及用户是否仍有掌控感。
 
-## 连接
 
 - [方向一致的反馈比单纯高亮更能稳定意图]({% link _notes/directional-feedback-stabilizes-bci.md %})
 - [容错机制让显式控制逐渐变成隐性学习]({% link _notes/implicit-learning-needs-error-tolerance.md %})

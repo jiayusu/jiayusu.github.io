@@ -8,7 +8,6 @@ summary: "抓取、标注、协作和投稿对工具的要求不同。"
 
 工具并不会替代分类和判断。若笔记没有稳定字段、论文之间没有关系，再强的管理软件也只会保存一个更整齐的文件堆。
 
-## 连接
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [外部记忆让工作能够从断点恢复]({% link _notes/external-memory-enables-resumption.md %})

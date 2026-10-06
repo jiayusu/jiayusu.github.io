@@ -8,7 +8,6 @@ summary: "记住答案不等于知道它在什么问题中有用。"
 
 遇到一个解法时，不只问“怎么做”，还要问“它属于什么问题族”“不用它还能怎么做”。语境让知识从固定答案变成可选择的工具。
 
-## 连接
 
 - [分类让碎片显露出研究结构]({% link _notes/classification-creates-structure.md %})
 - [领域通用语言让系统上下游对齐]({% link _notes/domain-language-aligns-systems.md %})

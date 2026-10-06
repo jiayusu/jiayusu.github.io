@@ -10,7 +10,6 @@ summary: "语言让人同时交换关系信息、声誉和可信度线索。"
 
 问题不在于闲聊本身，而在于它是否仍产生真实互惠，还是退化为单向展示。
 
-## 连接
 
 - [社群依靠共同精神与持续互动存在]({% link _notes/community-needs-shared-spirit.md %})
 - [公开构建把思考变成可追溯的外部对象]({% link _notes/build-in-public-externalizes-thinking.md %})

@@ -9,7 +9,6 @@ status: "可操作"
 
 在 VS Code 中打开命令面板，执行 **Python: Select Interpreter**，选择与终端 `python` 对应的解释器。必要时同时检查工作区设置和新终端启动后的环境是否一致。
 
-## 连接
 
 - [可复现的编程环境需要明确版本与恢复路径]({% link _notes/reproducible-coding-environments.md %})
 - [工具箱应该从命令行基础开始]({% link _notes/toolbox-starts-with-shell.md %})

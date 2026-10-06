@@ -10,7 +10,6 @@ summary: "感知是输入，符号运算是处理，行动是输出。"
 
 它的限制在于容易把身体和环境降为外设，低估行动本身如何参与感知与理解。
 
-## 连接
 
 - [具身认知把身体、行动与环境放回认知系统]({% link _notes/embodied-cognition-body-action-environment.md %})
 - [智能交互不只是感知、理解和响应三个模块]({% link _notes/intelligent-interaction-is-a-loop.md %})

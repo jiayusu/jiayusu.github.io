@@ -8,7 +8,6 @@ summary: "先做低成本准备，再在需要时压缩和行动。"
 
 材料第一次出现时只做轻量处理，使用频率和重要性上升后再逐层压缩。这样不会为所有信息提前支付同样成本，也能让最终决策建立在更成熟的上下文上。
 
-## 连接
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [时间才是最需要配置的投资本金]({% link _notes/time-is-the-real-investment.md %})

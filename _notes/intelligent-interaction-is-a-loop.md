@@ -10,7 +10,6 @@ summary: "三个模块只有进入相互校正的循环才产生智能交互。"
 
 评价智能交互时，应同时追问：系统感知了什么、忽略了什么；它如何表达自己的判断；用户能否低成本地纠正它。
 
-## 连接
 
 - [脑机接口只有形成闭环才成为交互系统]({% link _notes/bci-ar-robot-closed-loop.md %})
 - [经典认知科学把心智理解为信息处理]({% link _notes/classical-cognition-information-processing.md %})

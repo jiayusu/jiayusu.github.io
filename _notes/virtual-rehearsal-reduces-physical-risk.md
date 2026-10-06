@@ -10,7 +10,6 @@ summary: "先在可撤销空间确认意图，再驱动真实设备。"
 
 它把不可逆的物理行动变成可检查的中间状态，也是把容错从算法层延伸到交互层。
 
-## 连接
 
 - [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})
 - [容错机制让显式控制逐渐变成隐性学习]({% link _notes/implicit-learning-needs-error-tolerance.md %})

@@ -8,7 +8,6 @@ summary: "过去能提供边界，却不能替未来做决定。"
 
 剩余空间仍需自己试验。把建议当作剪枝工具，而不是路线替代品，才能同时利用经验和保留探索。
 
-## 连接
 
 - [未来方向应该从已有工作的边界生长]({% link _notes/research-gaps-grow-from-boundaries.md %})
 - [初学者心态需要主动寻找反证]({% link _notes/beginners-mind-needs-counterevidence.md %})

@@ -8,7 +8,6 @@ summary: "真实使用暴露的问题比想象中的完整方案更可靠。"
 
 “改出来”不等于无方向地加功能。每轮修改都应围绕一个明确问题，保留有效结构，删除不能产生价值的复杂性。产品质量来自连续判断，而不是一次灵感。
 
-## 连接
 
 - [小资源环境更能暴露真正的优先级]({% link _notes/small-resources-reveal-priorities.md %})
 - [建造系统与使用系统需要不同的思维]({% link _notes/building-and-using-systems-differ.md %})

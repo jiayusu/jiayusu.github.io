@@ -8,7 +8,6 @@ summary: "自我不是等待发现的内核，而是在行动和作品中形成�
 
 因此自我是持续塑造的过程。与高标准的作品、问题和人物碰撞，不只是证明能力，也会改变以后能看见什么、愿意承担什么。
 
-## 连接
 
 - [创作标杆会改变我们能看见的可能性]({% link _notes/creative-exemplars-shape-output.md %})
 - [公开构建把思考变成可追溯的外部对象]({% link _notes/build-in-public-externalizes-thinking.md %})

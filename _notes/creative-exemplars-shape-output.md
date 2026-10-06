@@ -8,7 +8,6 @@ summary: "与高水平作品持续碰撞，才能逐渐形成自己的判断。"
 
 形成自己的东西并不意味着切断影响，而是充分理解影响后做出新的选择。标杆越具体，模仿和偏离都越有意识。
 
-## 连接
 
 - [人通过创造出来的东西认识自己]({% link _notes/creation-reveals-the-self.md %})
 - [生成式媒体产品的关键是约束处理管线]({% link _notes/generative-media-needs-pipeline-constraints.md %})

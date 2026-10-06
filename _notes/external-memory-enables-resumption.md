@@ -8,7 +8,6 @@ summary: "记录下一步比记录完成感更能帮助未来的自己。"
 
 好的断点记录很短，却包含重新启动所需的触发器。它把“记住这件事”的负担移出大脑，让注意力回到当前问题。
 
-## 连接
 
 - [公开构建把思考变成可追溯的外部对象]({% link _notes/build-in-public-externalizes-thinking.md %})
 - [学习需要预先设置终点]({% link _notes/learning-needs-an-end.md %})

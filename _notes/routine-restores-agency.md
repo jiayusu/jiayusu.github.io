@@ -8,7 +8,6 @@ summary: "吃饭、睡眠、清洁与整理会直接改变可用精力。"
 
 这些动作不会直接解决职业或关系问题，却能恢复身体节律和环境可预测性，为更复杂的决定提供可用精力。主动性有时不是先想清楚，而是先把下一步做得足够容易。
 
-## 连接
 
 - [改变环境通常比对抗习惯可靠]({% link _notes/design-environment-not-willpower.md %})
 - [人生审计把模糊不满变成可检查的问题]({% link _notes/life-audit-is-structured-reflection.md %})

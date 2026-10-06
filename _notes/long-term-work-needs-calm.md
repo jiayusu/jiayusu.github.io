@@ -8,7 +8,6 @@ summary: "心静来自长期打算，而不是短期没有波动。"
 
 这种“心静”不是消极等待，而是不让一次结果决定整体判断。长期方向保持稳定，局部方法可以不断调整。
 
-## 连接
 
 - [训练只有配合复盘才会积累]({% link _notes/practice-needs-review.md %})
 - [热爱与相信共同支撑长期投入]({% link _notes/love-and-belief-sustain-work.md %})

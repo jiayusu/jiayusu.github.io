@@ -10,7 +10,6 @@ summary: "先按主题和流派排列，论述框架才会浮现。"
 
 写作结构往往不是先想出来的，而是在反复移动和比较材料时长出来的。
 
-## 连接
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [写作的瓶颈通常是组织而不是句子]({% link _notes/writing-bottleneck-organization.md %})

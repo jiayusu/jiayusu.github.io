@@ -10,7 +10,6 @@ summary: "认知并不只发生在大脑内部。"
 
 这个视角提醒交互设计者：减少按钮并不自动等于自然；如果系统切断了行动与反馈，界面再简洁也可能增加认知负担。
 
-## 连接
 
 - [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})
 - [零接触并不自动等于自然交互]({% link _notes/zero-touch-is-not-natural.md %})

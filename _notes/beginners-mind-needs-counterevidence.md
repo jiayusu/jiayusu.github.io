@@ -8,7 +8,6 @@ summary: "开放并不是不知道，而是让已有解释继续接受挑战。"
 
 可尝试完整解释一个熟悉概念，暴露“解释深度错觉”；也可要求自己写出最强反方观点。开放性不是放弃判断，而是让判断保留被更新的通道。
 
-## 连接
 
 - [读论文先回答创新、局限和批评]({% link _notes/read-paper-three-questions.md %})
 - [经验只能排除一些必死选项]({% link _notes/experience-only-removes-dead-ends.md %})

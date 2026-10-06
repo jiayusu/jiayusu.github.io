@@ -10,7 +10,6 @@ EEG 输入天然波动。如果机器人对每次采样立即反应，用户就�
 
 容错不是把错误藏起来，而是让错误以可恢复、可理解的方式出现。稳定性为隐性学习提供了时间尺度。
 
-## 连接
 
 - [脑机接口只有形成闭环才成为交互系统]({% link _notes/bci-ar-robot-closed-loop.md %})
 - [虚拟预演能降低物理行动的试错成本]({% link _notes/virtual-rehearsal-reduces-physical-risk.md %})

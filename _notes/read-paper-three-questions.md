@@ -10,7 +10,6 @@ summary: "三个问题比从头到尾被动阅读更容易留下可用信息。"
 
 阅读的产物不再是一段摘要，而是之后可以直接比较和组合的判断。
 
-## 连接
 
 - [文献笔记应该直接进入比较表]({% link _notes/literature-comparison-table.md %})
 - [未来方向应该从已有工作的边界生长]({% link _notes/research-gaps-grow-from-boundaries.md %})

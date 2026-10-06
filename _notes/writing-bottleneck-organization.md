@@ -10,7 +10,6 @@ summary: "材料的层级和关系不清，润色无法补救。"
 
 原子笔记的价值也在这里：先把单个判断写清，再组合成文章，而不是一开始就在长文中同时思考所有层级。
 
-## 连接
 
 - [分类让碎片显露出研究结构]({% link _notes/classification-creates-structure.md %})
 - [知识块只有连接语境才容易迁移]({% link _notes/context-gives-chunks-meaning.md %})

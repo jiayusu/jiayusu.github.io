@@ -8,7 +8,6 @@ summary: "数量提供样本，复盘把样本变成方法。"
 
 复盘最好贴近实际环节，而不是泛泛评价自己是否努力。能修改下一次行为的结论，才真正进入训练系统。
 
-## 连接
 
 - [长期做事首先需要把时间尺度拉长]({% link _notes/long-term-work-needs-calm.md %})
 - [学习需要预先设置终点]({% link _notes/learning-needs-an-end.md %})

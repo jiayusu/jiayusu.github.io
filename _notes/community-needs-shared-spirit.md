@@ -8,7 +8,6 @@ summary: "人数和平台并不能自动产生共同体。"
 
 共同精神为成员解释“为什么聚在这里”，互动则不断验证这种解释。只有口号而没有互惠，社群会变成受众列表；只有聊天而没有共同方向，也很难形成长期凝聚力。
 
-## 连接
 
 - [闲聊是一种低成本的社会关系维护]({% link _notes/conversation-maintains-social-bonds.md %})
 - [热爱与相信共同支撑长期投入]({% link _notes/love-and-belief-sustain-work.md %})

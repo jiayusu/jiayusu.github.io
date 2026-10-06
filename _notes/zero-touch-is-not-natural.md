@@ -8,7 +8,6 @@ summary: "减少身体动作可能把负担转移到持续注意和刻意思维�
 
 如果系统要求人用刻意思维激活本来由身体自然触发的“抓取”概念，负担只是从肌肉转移到了注意力。判断交互是否自然，应看输入是否符合人的已有能力、反馈是否及时、错误是否容易恢复，而不是只看有没有接触。
 
-## 连接
 
 - [运动想象会重新调用身体经验]({% link _notes/motor-imagery-reuses-body-experience.md %})
 - [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})

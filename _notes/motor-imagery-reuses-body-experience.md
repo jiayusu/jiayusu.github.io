@@ -10,7 +10,6 @@ summary: "没有实际动作，不代表身体完全退出了认知。"
 
 问题也随之出现：持续、刻意地制造运动想象并不自然。身体经验被调用了，却缺少真实动作提供的丰富反馈，因此容易疲劳。
 
-## 连接
 
 - [零接触并不自动等于自然交互]({% link _notes/zero-touch-is-not-natural.md %})
 - [低认知负荷反馈应该分散到多种感官]({% link _notes/low-load-feedback-needs-multimodality.md %})

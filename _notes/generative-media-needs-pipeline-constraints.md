@@ -8,7 +8,6 @@ summary: "价值不只来自生成，而来自降低随机性和控制成本。"
 
 产品需要在管线各阶段增加约束、校验和人工选择，同时压低推理成本。模型能力决定上限，处理管线决定结果是否可重复交付。
 
-## 连接
 
 - [小资源环境更能暴露真正的优先级]({% link _notes/small-resources-reveal-priorities.md %})
 - [创作工具的门槛会被多条技术曲线共同压低]({% link _notes/3d-creation-thresholds-fall-together.md %})

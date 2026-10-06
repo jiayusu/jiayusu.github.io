@@ -8,7 +8,6 @@ summary: "业务、界面与代码对同一概念使用同一组词。"
 
 通用语言不是术语表，而是对业务边界的共同承诺。一个词的定义发生变化时，相关流程和代码也应一起接受检查。
 
-## 连接
 
 - [数据库模型应该先于界面细节]({% link _notes/database-model-before-interface.md %})
 - [知识块只有连接语境才容易迁移]({% link _notes/context-gives-chunks-meaning.md %})

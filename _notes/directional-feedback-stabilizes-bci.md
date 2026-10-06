@@ -10,7 +10,6 @@ summary: "反馈应与用户正在形成的动作表征保持一致。"
 
 因此，BCI 反馈设计的重点不是装饰强度，而是反馈与意图之间是否存在可学习的对应关系。
 
-## 连接
 
 - [脑机接口只有形成闭环才成为交互系统]({% link _notes/bci-ar-robot-closed-loop.md %})
 - [低认知负荷反馈应该分散到多种感官]({% link _notes/low-load-feedback-needs-multimodality.md %})

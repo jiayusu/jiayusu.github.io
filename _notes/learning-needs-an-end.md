@@ -8,7 +8,6 @@ summary: "明确停止条件能防止疲劳吞掉巩固时间。"
 
 终点不是偷懒，而是给睡眠、复述和下一次继续留下空间。一次学习结束时，最好记录获得了什么、哪里仍不清楚、下一步从哪里开始。
 
-## 连接
 
 - [外部记忆让工作能够从断点恢复]({% link _notes/external-memory-enables-resumption.md %})
 - [训练只有配合复盘才会积累]({% link _notes/practice-needs-review.md %})

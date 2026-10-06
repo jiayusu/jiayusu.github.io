@@ -8,7 +8,6 @@ summary: "让坏选择更难、好选择更顺手。"
 
 环境不能解决所有动机问题，但它能让注意力不必反复消耗在相同冲突上。稳定行为往往来自默认路径，而不是持续自我说服。
 
-## 连接
 
 - [恢复基本秩序是重新获得主动性的第一步]({% link _notes/routine-restores-agency.md %})
 - [学习需要预先设置终点]({% link _notes/learning-needs-an-end.md %})

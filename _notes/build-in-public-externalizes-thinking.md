@@ -8,7 +8,6 @@ Build in public 的价值不只是宣传。持续记录看过什么、怎样判�
 
 公开并不要求发布所有私人内容。可以公开问题、取舍和作品进展，同时保留不适合传播的生活细节。重要的是让思考拥有外部形态，未来可以连接、复盘和修正。
 
-## 连接
 
 - [外部记忆让工作能够从断点恢复]({% link _notes/external-memory-enables-resumption.md %})
 - [人通过创造出来的东西认识自己]({% link _notes/creation-reveals-the-self.md %})

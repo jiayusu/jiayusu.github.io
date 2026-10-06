@@ -8,7 +8,6 @@ summary: "算法、硬件、云计算和专利变化需要同时成熟。"
 
 判断一个创作领域是否会快速普及，应观察完整管线中最贵、最慢、最专业的环节是否同时松动，而不只关注单点性能。
 
-## 连接
 
 - [云端 GPU 让手机摄影测量成为可用的扫描工具]({% link _notes/3d-scanning-cloud.md %})
 - [生成式媒体产品的关键是约束处理管线]({% link _notes/generative-media-needs-pipeline-constraints.md %})

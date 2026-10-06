@@ -10,7 +10,6 @@ summary: "固定维度能让零散论文变成可比较的证据。"
 
 好的比较表服务于判断，不追求收集所有元数据。
 
-## 连接
 
 - [读论文先回答创新、局限和批评]({% link _notes/read-paper-three-questions.md %})
 - [分类让碎片显露出研究结构]({% link _notes/classification-creates-structure.md %})

@@ -10,7 +10,6 @@ AR 能把反馈放进任务场景，但高密度覆盖层会争夺视觉注意�
 
 多模态的价值不在于增加刺激，而在于减少任何单一通道必须承受的信息量。
 
-## 连接
 
 - [方向一致的反馈比单纯高亮更能稳定意图]({% link _notes/directional-feedback-stabilizes-bci.md %})
 - [零接触并不自动等于自然交互]({% link _notes/zero-touch-is-not-natural.md %})

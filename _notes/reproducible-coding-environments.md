@@ -8,7 +8,6 @@ summary: "能够还原环境，比记住曾经怎么配置更可靠。"
 
 最小实践包括锁定依赖、区分项目环境与全局环境、保存必要配置，并验证从干净状态能否重新运行。恢复能力本身就是开发效率的一部分。
 
-## 连接
 
 - [VS Code 与终端必须使用同一个 Python 解释器]({% link _notes/vscode-interpreter-match.md %})
 - [工具箱应该从命令行基础开始]({% link _notes/toolbox-starts-with-shell.md %})

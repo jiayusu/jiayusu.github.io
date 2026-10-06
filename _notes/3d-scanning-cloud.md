@@ -10,7 +10,6 @@ summary: "手机负责采集，云端把原本数小时的重建压缩到可接�
 
 关键创新不是把完整扫描仪塞进手机，而是重新切分采集和计算的位置。
 
-## 连接
 
 - [创作工具的门槛会被多条技术曲线共同压低]({% link _notes/3d-creation-thresholds-fall-together.md %})
 - [建造系统与使用系统需要不同的思维]({% link _notes/building-and-using-systems-differ.md %})
