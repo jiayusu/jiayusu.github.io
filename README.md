@@ -1,115 +1,46 @@
-# 个人博客
+# Su Jiayu 的工作笔记
 
-这是一个简洁、优雅的个人博客，采用纯HTML、CSS和JavaScript编写，支持Markdown文章，无需依赖任何复杂框架。
+一个部署在 GitHub Pages 上的 Jekyll 原子笔记站。
 
-## 功能特性
+## 写一篇概念笔记
 
-- 🎨 简洁简约的设计风格
-- 📱 响应式布局，适配各种设备
-- ✨ 流畅的交互效果
-- � 支持Markdown文章
-- ⌨️ 支持键盘快捷键导航
-- �📦 易于扩展，方便添加新内容
-- 🚀 快速加载，适合GitHub Pages部署
+在 `_notes/` 新建不带日期的 Markdown 文件。标题应是一条可以独立理解的观点，而不只是宽泛主题：
 
-## 目录结构
+```markdown
+---
+title: "反馈必须让用户知道系统如何理解自己"
+topic: "交互与认知"
+summary: "一句话说明这篇笔记解决的问题。"
+---
 
-```
-├── index.html          # 主页面
-├── post.html           # 文章详情页
-├── posts.html          # 文章列表页
-├── README.md           # 说明文档
-├── generate-posts-data.js  # 生成文章数据的脚本
-├── _posts/             # Markdown文章目录
-└── assets/             # 资源文件夹
-    ├── css/            # 样式文件
-    └── js/             # JavaScript文件
-        ├── main.js     # 主脚本
-        ├── post.js     # 文章加载脚本
-        ├── keyboard.js # 键盘快捷键脚本
-        └── posts-data.js  # 生成的文章数据
+只展开一个概念。
+
+## 连接
+
+- [相关概念]({% raw %}{% link _notes/products-emerge-through-iteration.md %}{% endraw %})
+- 来源：[原始记录]({% raw %}{% post_url 2026-10-06-G %}{% endraw %})
 ```
 
-## 如何使用
+## 保存来源记录
 
-### 部署到GitHub Pages
-
-1. 将所有文件上传到GitHub仓库
-2. 在仓库设置中开启GitHub Pages
-3. 选择主分支作为源
-4. 访问提供的GitHub Pages URL即可查看博客
-
-### 添加新文章
-
-1. 在`_posts/`目录下创建新的Markdown文件
-2. 文件名格式：`YYYY-MM-DD-文章标题.md`
-3. 在文件开头添加front matter：
+日记、摘录和长文继续放在 `_posts/`。在 front matter 中列出由它展开的概念文件名：
 
 ```markdown
 ---
 layout: post
-title: "文章标题"
+title: "来源记录"
 date: YYYY-MM-DD
+concepts:
+  - products-emerge-through-iteration
 ---
-
-文章内容...
 ```
 
-4. 运行生成文章数据的脚本：
+首页按主题展示 `_notes`，来源记录保留在页面底部。桌面端会在右侧展开站内链接，移动端正常进入新页面。
+
+## 本地预览
 
 ```bash
-node generate-posts-data.js
+bundle exec jekyll serve
 ```
 
-5. 将生成的`posts-data.js`文件提交到GitHub
-
-### 自定义样式
-
-在`assets/css/style.css`文件中，您可以修改CSS变量来自定义配色方案：
-
-```css
-:root {
-    --primary-color: #333333;        /* 主色调 */
-    --secondary-color: #f0f0f0;      /* 次要色调 */
-    --accent-color: #0366d6;         /* 强调色 */
-    --text-primary: #333333;         /* 主要文字颜色 */
-    --text-secondary: #666666;       /* 次要文字颜色 */
-    --bg-primary: #ffffff;           /* 主要背景色 */
-    --bg-secondary: #fafafa;         /* 次要背景色 */
-}
-```
-
-### 键盘快捷键
-
-- `?` - 显示帮助
-- `H` - 回到首页
-- `A` - 文章列表
-- `P` - 个人介绍
-- `↑/↓` - 导航
-- `Enter` - 选择
-- `Q` - 退出
-
-## 技术栈
-
-- **HTML5** - 页面结构
-- **CSS3** - 样式设计
-- **JavaScript (ES6+)** - 交互效果
-- **marked.js** - Markdown渲染
-- **GitHub Pages** - 部署平台
-
-## 浏览器支持
-
-- Chrome (推荐)
-- Firefox
-- Safari
-- Edge
-
-## 许可证
-
-MIT License
-
-## 联系方式
-
-如有任何问题或建议，欢迎通过以下方式联系：
-
-- GitHub: [jiayusu](https://github.com/jiayusu)
+发布由 GitHub Pages 完成。

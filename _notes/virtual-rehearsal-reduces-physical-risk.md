@@ -1,0 +1,17 @@
+---
+title: "虚拟预演能降低物理行动的试错成本"
+topic: "交互与认知"
+summary: "先在可撤销空间确认意图，再驱动真实设备。"
+---
+
+当意图识别存在不确定性时，直接执行物理动作会让一次误判变得昂贵。虚拟预演可以先显示机器人准备采取的动作，让用户确认、修正或撤销，再进入真实执行。
+
+这种缓冲并非单纯增加确认步骤。理想的预演应该快速、直观，只在高风险或低置信度时介入，并让用户清楚看到系统为何准备这样做。
+
+它把不可逆的物理行动变成可检查的中间状态，也是把容错从算法层延伸到交互层。
+
+## 连接
+
+- [可供性是在行动中被感知的]({% link _notes/affordance-emerges-through-action.md %})
+- [容错机制让显式控制逐渐变成隐性学习]({% link _notes/implicit-learning-needs-error-tolerance.md %})
+- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

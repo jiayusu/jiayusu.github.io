@@ -1,0 +1,17 @@
+---
+title: "运动想象会重新调用身体经验"
+topic: "交互与认知"
+summary: "没有实际动作，不代表身体完全退出了认知。"
+---
+
+运动想象要求用户在脑中模拟动作。虽然手没有真实抓取，想象仍建立在既有的身体经验和运动表征上，并能成为脑机接口的控制信号。
+
+这使 BCI 处在经典认知和具身认知之间：系统把脑信号转换为离散命令，但命令的来源并非纯抽象符号，而是身体动作的神经再现。
+
+问题也随之出现：持续、刻意地制造运动想象并不自然。身体经验被调用了，却缺少真实动作提供的丰富反馈，因此容易疲劳。
+
+## 连接
+
+- [零接触并不自动等于自然交互]({% link _notes/zero-touch-is-not-natural.md %})
+- [低认知负荷反馈应该分散到多种感官]({% link _notes/low-load-feedback-needs-multimodality.md %})
+- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

@@ -2,6 +2,18 @@
 layout: post
 title: "从经典认知科学、具身认知分析EEG驱动的AR-机器人零接触抓取操控系统"
 date: 2025-11-30
+concepts:
+  - bci-ar-robot-closed-loop
+  - directional-feedback-stabilizes-bci
+  - intelligent-interaction-is-a-loop
+  - classical-cognition-information-processing
+  - embodied-cognition-body-action-environment
+  - affordance-emerges-through-action
+  - motor-imagery-reuses-body-experience
+  - zero-touch-is-not-natural
+  - implicit-learning-needs-error-tolerance
+  - low-load-feedback-needs-multimodality
+  - virtual-rehearsal-reduces-physical-risk
 ---
 
 文献链接：[EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation](https://arxiv.org/abs/2509.20656)
@@ -375,4 +387,3 @@ AR 提供的抓取目标与手部动作的映射、以及 neurofeedback 的实�
 
 
 
- 

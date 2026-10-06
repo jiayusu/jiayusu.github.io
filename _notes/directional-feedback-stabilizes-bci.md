@@ -1,0 +1,17 @@
+---
+title: "方向一致的反馈比单纯高亮更能稳定意图"
+topic: "交互与认知"
+summary: "反馈应与用户正在形成的动作表征保持一致。"
+---
+
+反馈并非越醒目越有效。对于运动想象，视觉反馈若沿着用户想象的方向变化，就能把模糊的脑信号、视觉结果和下一次想象连接起来；静态高亮只能说明“系统收到了一些东西”。
+
+方向一致的微动提供了连续误差信号：用户可以感觉自己正在接近还是偏离目标。伪反馈即使同样显眼，也可能破坏这种学习关系。
+
+因此，BCI 反馈设计的重点不是装饰强度，而是反馈与意图之间是否存在可学习的对应关系。
+
+## 连接
+
+- [脑机接口只有形成闭环才成为交互系统]({% link _notes/bci-ar-robot-closed-loop.md %})
+- [低认知负荷反馈应该分散到多种感官]({% link _notes/low-load-feedback-needs-multimodality.md %})
+- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

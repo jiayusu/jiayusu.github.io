@@ -1,0 +1,17 @@
+---
+title: "脑机接口只有形成闭环才成为交互系统"
+topic: "交互与认知"
+summary: "意图识别、反馈和物理行动必须彼此校正。"
+---
+
+EEG 只能给出带噪声的意图线索。若系统只把分类结果直接变成机器人命令，用户既看不见系统如何理解自己，也没有机会修正下一次输入，这仍然更像遥控器，而不是交互。
+
+闭环需要把 **EEG 意图 → AR 目标选择 → 机器人行动 → 可感知反馈** 连在一起。用户根据反馈调整运动想象，系统也通过连续采样修正判断，双方在循环中共同趋近目标。
+
+这意味着交互质量不能只看单次分类准确率，还要看反馈延迟、纠错机会以及用户是否仍有掌控感。
+
+## 连接
+
+- [方向一致的反馈比单纯高亮更能稳定意图]({% link _notes/directional-feedback-stabilizes-bci.md %})
+- [容错机制让显式控制逐渐变成隐性学习]({% link _notes/implicit-learning-needs-error-tolerance.md %})
+- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

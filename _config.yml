@@ -1,7 +1,7 @@
 title: Su Jiayu
 email: bbbbbbbb@bupt.edu.cn
 description: >
-  Notes on AI, design, coding and things I am learning.
+  关于 AI、产品、编程与生活的公开工作笔记。
 
 baseurl: ""
 url: "https://jiayusu.github.io"
@@ -13,6 +13,19 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+      status: 生长中
 
 author:
   name: "Su Jiayu"

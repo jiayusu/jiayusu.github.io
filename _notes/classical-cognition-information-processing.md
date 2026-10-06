@@ -1,0 +1,17 @@
+---
+title: "经典认知科学把心智理解为信息处理"
+topic: "交互与认知"
+summary: "感知是输入，符号运算是处理，行动是输出。"
+---
+
+经典认知科学倾向于把认知描述为信息的获取、保存、转换和使用。大脑像计算机，心智活动是内部符号操作，感知提供输入，行动负责输出。
+
+这个模型之所以有力量，是因为复杂智能可以被拆成注意、记忆、判断和决策等模块，并进一步工程化。传统 HCI 的“用户输入—系统处理—界面反馈”也自然继承了这种结构。
+
+它的限制在于容易把身体和环境降为外设，低估行动本身如何参与感知与理解。
+
+## 连接
+
+- [具身认知把身体、行动与环境放回认知系统]({% link _notes/embodied-cognition-body-action-environment.md %})
+- [智能交互不只是感知、理解和响应三个模块]({% link _notes/intelligent-interaction-is-a-loop.md %})
+- 来源：[EEG、AR 与机器人抓取分析]({% post_url 2025-11-30-分析EEG‑Driven AR‑Robot System for Zero‑Touch Grasping Manipulation %})

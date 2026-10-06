@@ -1,19 +1,49 @@
 ---
 layout: default
-title: 首页
+title: Su Jiayu 的工作笔记
 ---
 
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    <div class="post-meta">
-      {{ post.date | date: '%Y-%m-%d' }}
-    </div>
-  </li>
-  {% endfor %}
-</ul>
+<article class="note note--index">
+  <header class="note-header">
+    <p class="note-kicker">{{ site.notes.size }} 个持续生长的概念</p>
+    <h1>Su Jiayu 的工作笔记</h1>
+  </header>
 
-{% if site.posts.size == 0 %}
-<p>暂无文章</p>
-{% endif %}
+  <div class="note-content">
+    <p>这里不是按时间归档的成品文章，而是一张不断生长的思考网络。每篇笔记只展开一个概念；点击链接，可以在右侧沿着概念继续走。</p>
+
+    {% assign topics = '交互与认知|学习与研究|产品与系统|创作与工具|生活与自我' | split: '|' %}
+    {% for topic in topics %}
+      {% assign topic_notes = site.notes | where: 'topic', topic | sort: 'title' %}
+      {% if topic_notes.size > 0 %}
+      <section class="topic-group">
+        <h2>{{ topic }}</h2>
+        <ul class="concept-index">
+          {% for note in topic_notes %}
+          <li>
+            <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+            {% if note.summary %}<span>{{ note.summary }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    {% endfor %}
+
+    <section class="source-index">
+      <h2>来源记录</h2>
+      <p>原来的文章和日记仍被完整保留，用来追溯概念出现时的上下文。</p>
+      <ul class="note-index">
+        {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <h2>关于</h2>
+    <p>我是 Su Jiayu，BUPT 本科生，关注 AI、产品、编程与交互设计。你可以在 <a href="https://github.com/jiayusu">GitHub</a> 找到我。</p>
+  </div>
+</article>

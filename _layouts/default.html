@@ -1,162 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    {% seo %}
-  
-    <title>{{ page.title | default: site.title }}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        header {
-            margin-bottom: 30px;
-        }
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-        nav a:hover {
-            color: #0366d6;
-        }
-        h1, h2, h3 {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .post-list {
-            list-style: none;
-            padding: 0;
-        }
-        .post-list li {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        .post-meta {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
-        article {
-            margin-top: 30px;
-        }
-        .post-content {
-            font-family: inherit;
-            line-height: 1.7;
-        }
-        .post-content p {
-            margin-bottom: 16px;
-        }
-        .post-content h1, .post-content h2, .post-content h3 {
-            text-align: left;
-            margin-top: 30px;
-            margin-bottom: 16px;
-        }
-        footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            text-align: center;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .pagination {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .pagination a {
-            margin: 0 5px;
-            padding: 5px 10px;
-            text-decoration: none;
-            color: #333;
-            border: 1px solid #eee;
-        }
-        .pagination a:hover {
-            background-color: #f5f5f5;
-        }
-        .pagination span {
-            margin: 0 5px;
-            padding: 5px 10px;
-            color: #666;
-            border: 1px solid #eee;
-        }
-        .post-navigation {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: nowrap;
-        }
-        .post-nav-link {
-            flex: 1;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .post-nav-link:hover {
-            background-color: #f5f5f5;
-        }
-        .nav-direction {
-            font-size: 14px;
-            color: #666;
-            margin-right: 10px;
-        }
-        .nav-title {
-            font-size: 14px;
-            color: #333;
-        }
-        .prev-post {
-            text-align: left;
-        }
-        .next-post {
-            text-align: right;
-        }
-        .next-post .nav-direction {
-            margin-right: 0;
-            margin-left: 10px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/notes.css' | relative_url }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{{ site.baseurl }}/">首页</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
+  <main class="note-space" id="note-space" aria-label="笔记浏览区">
+    <section class="note-column" data-note-column data-note-url="{{ page.url | relative_url }}">
+      <div class="note-column__bar">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <button class="close-note" type="button" aria-label="关闭这篇笔记">×</button>
+      </div>
+      <div class="note-column__body">
         {{ content }}
-    </main>
-
-    <footer>
-        <p>&copy; {{ site.time | date: '%Y' }}</p>
-    </footer>
+      </div>
+    </section>
+  </main>
+  <div class="loading-note" id="loading-note" role="status" aria-live="polite">正在打开笔记…</div>
+  <script src="{{ '/assets/js/notes.js' | relative_url }}"></script>
 </body>
 </html>
