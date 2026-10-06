@@ -35,7 +35,7 @@
 
     if (existing) {
       closeAfter(existing);
-      existing.scrollIntoView({ behavior: 'smooth', inline: 'end' });
+      existing.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
       history.pushState({ noteUrl: targetUrl }, '', targetUrl);
       return;
     }
@@ -53,7 +53,7 @@
 
       incoming.dataset.noteUrl = targetUrl;
       space.append(incoming);
-      incoming.scrollIntoView({ behavior: 'smooth', inline: 'end' });
+      incoming.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
       history.pushState({ noteUrl: targetUrl }, '', targetUrl);
     } catch (error) {
       window.location.assign(targetUrl);
@@ -69,7 +69,7 @@
       const previous = column.previousElementSibling;
       column.remove();
       if (previous) {
-        previous.scrollIntoView({ behavior: 'smooth', inline: 'end' });
+        previous.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
         history.pushState({ noteUrl: previous.dataset.noteUrl }, '', previous.dataset.noteUrl);
       }
       return;
@@ -80,6 +80,23 @@
 
     event.preventDefault();
     openNote(link, link.closest('[data-note-column]'));
+  });
+
+  space.addEventListener('wheel', (event) => {
+    if (!desktop.matches || !event.shiftKey || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+    event.preventDefault();
+    space.scrollBy({ left: event.deltaY, behavior: 'auto' });
+  }, { passive: false });
+
+  window.addEventListener('keydown', (event) => {
+    if (!desktop.matches || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    if (event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
+
+    event.preventDefault();
+    const direction = event.key === 'ArrowRight' ? 1 : -1;
+    const column = space.querySelector('[data-note-column]');
+    const distance = column ? column.getBoundingClientRect().width * 0.8 : window.innerWidth * 0.8;
+    space.scrollBy({ left: direction * distance, behavior: 'smooth' });
   });
 
   window.addEventListener('popstate', () => window.location.reload());

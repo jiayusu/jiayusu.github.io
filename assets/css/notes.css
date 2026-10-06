@@ -41,6 +41,7 @@ a:hover { color: var(--link-hover); }
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
   scrollbar-color: #c8c4ba transparent;
 }
 
