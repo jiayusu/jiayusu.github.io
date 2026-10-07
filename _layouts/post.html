@@ -3,29 +3,10 @@ layout: default
 ---
 <article class="note">
   <header class="note-header">
-    <p class="note-kicker">来源笔记 · {{ page.date | date: '%Y-%m-%d' }}</p>
     <h1>{{ page.title }}</h1>
-    {% if page.categories.size > 0 or page.tags.size > 0 %}
-    <p class="note-taxonomy">
-      {% for category in page.categories %}<span>{{ category }}</span>{% endfor %}
-      {% for tag in page.tags %}<span>#{{ tag }}</span>{% endfor %}
-    </p>
-    {% endif %}
   </header>
 
   <div class="note-content">
     {{ content }}
   </div>
-
-  <aside class="note-links" aria-label="由来源展开的概念笔记">
-    <h2>由此展开</h2>
-    <ul>
-      {% for concept_slug in page.concepts %}
-        {% for concept in site.notes %}
-          {% if concept.url contains concept_slug %}<li><a href="{{ concept.url | relative_url }}">{{ concept.title }}</a></li>{% endif %}
-        {% endfor %}
-      {% endfor %}
-      <li><a href="{{ '/' | relative_url }}">回到笔记入口</a></li>
-    </ul>
-  </aside>
 </article>

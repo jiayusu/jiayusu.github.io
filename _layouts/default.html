@@ -9,16 +9,17 @@
 </head>
 <body>
   <main class="note-space" id="note-space" aria-label="笔记浏览区">
-    <section class="note-column" data-note-column data-note-url="{{ page.url | relative_url }}">
-      <div class="note-column__bar">
-        <button class="close-note" type="button" aria-label="关闭这篇笔记">×</button>
-      </div>
-      <div class="note-column__body">
-        {{ content }}
-      </div>
-    </section>
+    <div class="note-track" id="note-track">
+      <section class="note-column" data-note-column data-note-url="{{ page.url | relative_url }}" data-note-title="{{ page.title | default: site.title | escape }}">
+        <div class="note-spine" aria-hidden="true">{{ page.title | default: site.title }}</div>
+        <div class="note-column__body">
+          {{ content }}
+        </div>
+      </section>
+    </div>
   </main>
   <div class="loading-note" id="loading-note" role="status" aria-live="polite">正在打开笔记…</div>
+  <aside class="note-preview" id="note-preview" hidden aria-hidden="true"></aside>
   <script src="{{ '/assets/js/notes.js' | relative_url }}"></script>
 </body>
 </html>
